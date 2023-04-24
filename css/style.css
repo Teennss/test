@@ -1,0 +1,3810 @@
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+input,
+button,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+html {
+  font-size: 62.5%;
+
+  overflow-x: hidden;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black;
+  color: black;
+
+  /* font-family: 'M PLUS 1p', sans-serif; */
+  font-family: "source-han-sans-japanese", sans-serif;
+}
+
+/*-----------------------------------*\
+  #header
+\*-----------------------------------*/
+
+.topbar {
+  margin: 0 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  height: 5rem;
+}
+
+.logo img {
+  width: 50%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  gap: 3rem;
+
+  white-space: nowrap;
+}
+
+.hero {
+  background-image: url(../image/VIP-LP1-PC16.9.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.herologo {
+  /* padding-left: 20rem;
+  padding-bottom: 5rem; */
+
+  position: relative;
+  top: 20%;
+  left: 25%;
+}
+.herologo img {
+  width: 80%;
+}
+
+.herotext h1 {
+  color: white;
+
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 10rem;
+  letter-spacing: 1rem;
+
+  position: relative;
+  top: 25%;
+  left: 25%;
+}
+
+.herobox {
+  display: flex;
+  flex-flow: column;
+}
+
+@media (max-width: 1400px) {
+  .topbar {
+    margin: 0 8rem;
+  }
+  .herologo {
+    /* padding-left: 20rem;
+    padding-bottom: 3rem; */
+  }
+  .herologo img {
+    width: 75%;
+  }
+  .herotext h1 {
+    font-size: 2.6rem;
+    line-height: 6rem;
+  }
+}
+@media (max-width: 1200px) {
+  .topbar {
+    margin: 0 6rem;
+  }
+  .navbar {
+    font-size: 1.2rem;
+    gap: 2rem;
+  }
+  .herologo {
+    /* padding-left: 15rem;
+    padding-bottom: 3rem; */
+  }
+  .herologo img {
+    width: 75%;
+  }
+  .herotext h1 {
+    font-size: 2.2rem;
+    line-height: 5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    background-image: url(../image/VIP-LP1-PC4.3.png);
+  }
+
+  .topbar {
+    margin: 0 4rem;
+  }
+  .navbar {
+    font-size: 1rem;
+    gap: 2rem;
+  }
+  .herologo {
+    /* padding-left: 10rem;
+    padding-bottom: 3rem; */
+  }
+  .herologo img {
+    width: 70%;
+  }
+  .herotext h1 {
+    font-size: 2rem;
+    line-height: 4.4rem;
+  }
+}
+@media (max-width: 875px) {
+  .logo img {
+    width: 60%;
+  }
+
+  .navbar {
+    font-size: 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 805px) {
+  .logo img {
+    width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .herologo {
+    /* padding-left: 10rem;
+    padding-bottom: 3rem; */
+    left: 15%;
+  }
+  .herologo img {
+    width: 60%;
+  }
+  .herotext h1 {
+    font-size: 1.8rem;
+    line-height: 4.4rem;
+
+    left: 15%;
+  }
+
+  .logo img {
+    width: 40%;
+  }
+
+  .navbar {
+    display: none;
+  }
+  .nav {
+    /* display: none; */
+  }
+
+  .navphonebut {
+    color: white;
+  }
+}
+
+@media (max-width: 575px) {
+  .navbar {
+    font-size: 0.5rem;
+    gap: 2rem;
+  }
+
+  .herologo {
+    /* padding-left: 5rem;
+    padding-bottom: 2rem; */
+    left: 10%;
+  }
+  .herotext h1 {
+    font-size: 1.4rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.6rem;
+    left: 10%;
+  }
+}
+
+@media (max-width: 450px) {
+  .topbar {
+    margin: 0 3rem;
+  }
+
+  .logo img {
+    width: 55%;
+  }
+
+  .herologo {
+    width: 80%;
+  }
+
+  .herologo img {
+    width: 70%;
+  }
+
+  .herotext h1 {
+    width: 80%;
+  }
+}
+
+@media (max-width: 378px) {
+  .herotext h1 {
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.4rem;
+  }
+}
+/*-----------------------------------*\
+  #section1
+\*-----------------------------------*/
+.sec1div {
+  background-image: url(../image/VIP-LP2-PC16.9.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 5rem auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec1text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  /* justify-items: center; */
+  align-items: center;
+}
+
+.sec1t1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.sec1t2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.sec1t3 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.sec1t1 h1 {
+  color: white;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-size: 3.8rem;
+  line-height: 8rem;
+  letter-spacing: 1rem;
+  /* padding-right: 50rem;
+  padding-top: 3rem; */
+
+  position: relative;
+  top: 20%;
+  left: 5%;
+}
+
+.sec1t2 p {
+  color: white;
+  font-weight: 900;
+  font-size: 3.4rem;
+  line-height: 4rem;
+  letter-spacing: 1rem;
+
+  position: relative;
+
+  left: 15%;
+}
+
+.sec1t3 h2 {
+  color: white;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 5rem;
+  letter-spacing: 1rem;
+
+  position: relative;
+
+  left: 15%;
+}
+
+.seclogo {
+  padding-top: 1rem;
+  /* padding-left: 15rem; */
+
+  position: relative;
+  left: 6%;
+}
+
+.logotext p {
+  padding-top: 2rem;
+  /* padding-left: 15rem; */
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.8rem;
+  letter-spacing: 0.6rem;
+
+  position: relative;
+  left: 6%;
+}
+
+.secline img {
+  width: 95%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3rem;
+}
+
+@media (max-width: 1400px) {
+  .sec1t1 h1 {
+    /* padding-left: 5rem; */
+    font-size: 3rem;
+    line-height: 6rem;
+  }
+
+  .sec1t2 p {
+    font-size: 2.8rem;
+    line-height: 4rem;
+    letter-spacing: 0.4rem;
+
+    left: 5%;
+  }
+
+  .sec1t3 h2 {
+    font-size: 2.8rem;
+    line-height: 5rem;
+  }
+
+  .seclogo {
+    /* padding-left: 8rem; */
+  }
+  .logotext p {
+    /* padding-left: 8rem; */
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 1200px) {
+  .sec1t1 h1 {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    /* padding-left: 5rem; */
+    letter-spacing: 0.6rem;
+    padding-bottom: 3rem;
+  }
+
+  .sec1t2 p {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    padding-bottom: 3rem;
+
+    left: 0%;
+  }
+
+  .sec1t3 h2 {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    padding-bottom: 3rem;
+  }
+
+  .seclogo {
+    /* padding-left: 8rem; */
+  }
+  .logotext p {
+    /* padding-left: 8rem; */
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec1div {
+    background-image: url(../image/VIP-LP2-PC4.3.png);
+  }
+
+  .sec1t1 h1 {
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+    /* padding-left: 5rem; */
+    letter-spacing: 0.6rem;
+    padding-bottom: 3rem;
+    width: 150%;
+  }
+
+  .sec1t2 p {
+    font-size: 2rem;
+    line-height: 4rem;
+    letter-spacing: 0.4rem;
+    padding-bottom: 3rem;
+  }
+
+  .sec1t3 h2 {
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+    padding-bottom: 3rem;
+  }
+
+  .seclogo {
+    /* padding-left: 5rem; */
+  }
+  .logotext p {
+    /* padding-left: 5rem; */
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .sec1t2 p {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    left: 3%;
+  }
+
+  .sec1t3 h2 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    left: 8%;
+  }
+
+  .seclogo img {
+    width: 40%;
+  }
+  .logotext p {
+    padding-top: 2rem;
+    /* padding-left: 4rem; */
+
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec1t1 h1 {
+    font-size: 2rem;
+    line-height: 3.4rem;
+    /* padding-left: 3rem; */
+  }
+
+  .sec1t2 p {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    left: 3%;
+  }
+
+  .sec1t3 h2 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    left: 8%;
+
+    letter-spacing: 0.6rem;
+  }
+
+  .seclogo {
+    /* padding-left: 4rem; */
+  }
+  .seclogo img {
+    width: 40%;
+  }
+  .logotext p {
+    padding-top: 2rem;
+    /* padding-left: 4rem; */
+
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .secline img {
+    padding-top: 1rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .sec1t2 p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.1rem;
+  }
+  .sec1t3 h2 {
+    font-size: 1.6rem;
+    line-height: 3.2rem;
+    left: 8%;
+  }
+}
+
+@media (max-width: 660px) {
+  .logotext p {
+    /* padding-left: 3rem; */
+
+    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .sec1t2 p {
+    left: -10%;
+  }
+}
+
+@media (max-width: 575px) {
+  .sec1t1 h1 {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    /* padding-left: 5rem; */
+    width: 100%;
+  }
+  .sec1t2 p {
+    font-size: 1rem;
+    line-height: 3rem;
+    letter-spacing: 0rem;
+
+    left: 5%;
+  }
+  .sec1t3 h2 {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.4rem;
+  }
+  .seclogo {
+    /* padding-left: 3rem; */
+  }
+  .logotext p {
+    /* padding-left: 3rem; */
+
+    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 450px) {
+  .sec1t1 h1 {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+  .sec1t2 p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    left: -5%;
+  }
+  .sec1t3 h2 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .logotext p {
+    line-height: 2rem;
+
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .sec1t1 h1 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    letter-spacing: 0.4rem;
+  }
+  .sec1t2 p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    left: -25%;
+    width: 110%;
+  }
+  .sec1t3 h2 {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    letter-spacing: 0rem;
+  }
+}
+
+/*-----------------------------------*\
+  #section2
+\*-----------------------------------*/
+.sec2div {
+  background-image: url(../image/VIP-LP3-PC16.9.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 5rem auto;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.sec2text {
+  /* display: grid; */
+  display: flex;
+  flex-flow: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0.2fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  /* justify-items: center; */
+  /* align-items: center; */
+}
+
+.sec2t1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.sec2t2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.sec2t3 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.sec2t1 h1 {
+  color: white;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 3.8rem;
+  line-height: 5rem;
+  letter-spacing: 1rem;
+  /* padding-right: 70rem; */
+  /* padding-top: 4rem; */
+
+  transform: rotate(-6deg);
+
+  position: relative;
+  left: 7%;
+  top: 5%;
+  padding-top: 5rem;
+}
+
+.sec2t2 p {
+  color: white;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 800;
+  font-size: 3rem;
+  line-height: 4rem;
+  letter-spacing: 1rem;
+  transform: rotate(-6deg);
+  text-align: right;
+
+  position: relative;
+  right: 6%;
+}
+
+.sec2t3 h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 5rem;
+  letter-spacing: 1rem;
+  transform: rotate(-6deg);
+  padding-top: 5rem;
+  padding-bottom: 15rem;
+
+  position: relative;
+  left: 18%;
+}
+
+@media (max-width: 1400px) {
+  .sec2t1 h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    padding-top: 3rem;
+    /* padding-left: 5rem; */
+    left: 5%;
+  }
+  .sec2t2 p {
+    font-size: 2.8rem;
+    line-height: 4rem;
+  }
+  .sec2t3 h2 {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sec2t1 h1 {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    /* padding-left: 5rem; */
+    letter-spacing: 0.8rem;
+  }
+  .sec2t2 p {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    letter-spacing: 0.8rem;
+  }
+  .sec2t3 h2 {
+    font-size: 2.2rem;
+    line-height: 4rem;
+    padding-top: 4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec2div {
+    background-image: url(../image/VIP-LP3-PC4.3.png);
+  }
+
+  .sec2t1 h1 {
+    font-size: 2.2rem;
+    line-height: 3.6rem;
+    /* padding-left: 5rem; */
+    letter-spacing: 0.6rem;
+    width: 150%;
+  }
+  .sec2t2 p {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.5rem;
+    /* padding-right: 3rem; */
+
+    padding-top: 3rem;
+  }
+  .sec2t3 h2 {
+    font-size: 2rem;
+    line-height: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+    left: 12%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec2t1 h1 {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.4rem;
+    width: 170%;
+  }
+  .sec2t2 p {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    letter-spacing: 0.3rem;
+    /* padding-right: 5rem; */
+    width: 120%;
+    padding-top: 4rem;
+    position: relative;
+    right: 28%;
+  }
+  .sec2t3 h2 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    padding-top: 2rem;
+
+    left: 8%;
+
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .sec2t3 h2 {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.5rem;
+    left: 8%;
+  }
+}
+
+@media (max-width: 575px) {
+  .sec2t1 h1 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+    width: 170%;
+    /* padding-left: 20rem; */
+  }
+  .sec2t2 p {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.2rem;
+    /* padding-right: 2rem; */
+    width: 120%;
+    position: relative;
+    right: 30%;
+  }
+  .sec2t3 h2 {
+    font-size: 1.6rem;
+    line-height: 3rem;
+    letter-spacing: 0.5rem;
+    left: 8%;
+  }
+}
+
+@media (max-width: 450px) {
+  .sec2t1 h1 {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  .sec2t2 p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  .sec2t3 h2 {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sec2t1 h1 {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .sec2t3 h2 {
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+  }
+}
+/*-----------------------------------*\
+  #section3
+\*-----------------------------------*/
+.sec3div {
+  background-image: url(../image/VIP-LP4-PC16.9.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec3text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 5rem;
+
+  /* justify-items: center; */
+  align-items: center;
+}
+
+.sec3t1 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.sec3t2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.sec3t3 {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+.sec3t1 h1:first-child {
+  font-size: 5.8rem;
+}
+
+.sec3t1 h1 {
+  color: white;
+  font-size: 3.8rem;
+  line-height: 5rem;
+  letter-spacing: 1rem;
+  /* padding-right: 80rem; */
+  padding-top: 3rem;
+
+  position: relative;
+  left: 6%;
+}
+
+.sec3t2 p {
+  color: white;
+  font-family: "Zen Old Mincho", serif;
+  font-size: 3.4rem;
+  line-height: 5.2rem;
+  letter-spacing: 1rem;
+  text-align: right;
+
+  position: relative;
+  right: 6%;
+}
+
+.sec3t3 h2 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 5rem;
+  letter-spacing: 1rem;
+  /* padding-right: 50rem; */
+
+  position: relative;
+  left: 6%;
+}
+
+@media (max-width: 1400px) {
+  .sec3text {
+    grid-template-rows: repeat(3, 0.2fr);
+  }
+
+  .sec3t1 h1:first-child {
+    font-size: 4.4rem;
+    line-height: 5rem;
+    /* padding-right: 2rem; */
+  }
+  .sec3t1 h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    /* padding-left: 5rem; */
+  }
+  .sec3t2 p {
+    font-size: 2.8rem;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    /* padding-right: 4rem; */
+    right: 10%;
+  }
+  .sec3t3 h2 {
+    font-size: 2.6rem;
+    line-height: 4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .sec3text {
+    grid-template-rows: repeat(3, 0.2fr);
+  }
+
+  .sec3t1 h1:first-child {
+    font-size: 4rem;
+    line-height: 5rem;
+    /* padding-right: 2rem; */
+  }
+  .sec3t1 h1 {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    /* padding-left: 5rem; */
+    width: 200%;
+  }
+  .sec3t2 p {
+    font-size: 2.4rem;
+    line-height: 4.2rem;
+    letter-spacing: 0.2rem;
+    /* padding-right: 4rem; */
+  }
+  .sec3t3 h2 {
+    font-size: 2.6rem;
+    line-height: 4rem;
+    /* padding-left: 5rem; */
+    padding-bottom: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .sec3div {
+    background-image: url(../image/VIP-LP4-PC4.3.png);
+  }
+
+  .sec3text {
+    grid-template-rows: repeat(3, 0.2fr);
+  }
+
+  .sec3t1 h1:first-child {
+    font-size: 3.6rem;
+    line-height: 5rem;
+    /* padding-right: 2rem; */
+  }
+  .sec3t1 h1 {
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    /* padding-left: 5rem; */
+    width: 200%;
+    padding-top: 2rem;
+  }
+  .sec3t2 p {
+    font-size: 2.2rem;
+    line-height: 4.2rem;
+    letter-spacing: 0.1rem;
+    /* padding-right: 5rem; */
+
+    right: 18%;
+  }
+  .sec3t3 h2 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    /* padding-left: 5rem; */
+    padding-bottom: 3rem;
+    width: 200%;
+  }
+}
+@media (max-width: 875px) {
+  .sec3t2 p {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 805px) {
+  .sec3t2 p {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec3text {
+    grid-row-gap: 2rem;
+  }
+
+  .sec3t1 h1:first-child {
+    font-size: 2.4rem;
+    line-height: 5rem;
+  }
+  .sec3t1 h1 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    /* padding-left: 15rem; */
+    width: 200%;
+    padding-top: 1rem;
+  }
+  .sec3t2 p {
+    font-size: 2rem;
+    line-height: 3.6rem;
+    letter-spacing: 0.1rem;
+    width: 120%;
+    position: relative;
+    right: 27%;
+  }
+  .sec3t3 h2 {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    /* padding-left: 5rem; */
+    padding-bottom: 3rem;
+    width: 200%;
+  }
+}
+
+@media (max-width: 676px) {
+  .sec3t2 p {
+    font-size: 1.7rem;
+  }
+
+  .sec3t3 h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .sec3t1 h1:first-child {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .sec3t1 h1 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    /* padding-left: 30rem; */
+    width: 200%;
+
+    letter-spacing: 0.8rem;
+  }
+  .sec3t2 p {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+    letter-spacing: 0rem;
+    width: 150%;
+    position: relative;
+    right: 55%;
+  }
+  .sec3t3 h2 {
+    font-size: 2rem;
+
+    letter-spacing: 0.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .sec3t1 h1:first-child {
+    font-size: 1.8rem;
+  }
+
+  .sec3t1 h1 {
+    font-size: 1.4rem;
+
+    letter-spacing: 0.4rem;
+  }
+
+  .sec3t2 p {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+  .sec3t3 h2 {
+    font-size: 1.8rem;
+
+    letter-spacing: 0.2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sec3t3 h2 {
+    font-size: 1.4rem;
+  }
+}
+/*-----------------------------------*\
+  #main
+\*-----------------------------------*/
+
+.maintop {
+  padding-top: 15rem;
+
+  border-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 10rem;
+}
+.maintop-left {
+  width: 50%;
+}
+
+.mainlogo {
+  padding-bottom: 5rem;
+}
+
+.maintoptext {
+  color: white;
+  font-weight: 400;
+  font-size: 2.4rem;
+  width: 110%;
+}
+
+.pricecartbox {
+  display: flex;
+  align-items: center;
+  /* gap: 30rem; */
+  padding-bottom: 6rem;
+
+  justify-content: space-between;
+}
+
+.price {
+  font-weight: 700;
+  font-size: 6rem;
+}
+
+.maft {
+  padding-bottom: 3rem;
+}
+
+.maintop-right {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 50%;
+}
+
+.maintop-right img {
+  /* padding-left: 15rem;
+  padding-bottom: 20rem; */
+  width: 80%;
+
+  object-fit: cover;
+
+  position: relative;
+  left: 20%;
+
+  border-radius: 1rem;
+}
+
+.maininfo {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding-bottom: 3rem;
+
+  margin: 0 3rem;
+}
+.maininfo-left {
+  width: 50%;
+}
+
+.maininfo-left img {
+  transform: rotateY(-180deg);
+  width: 70%;
+  margin: 0 auto;
+}
+
+.maininfo-right {
+  /* width: 40%; */
+  color: white;
+  display: flex;
+  justify-content: center;
+
+  width: 40%;
+}
+
+.maininfo-right li {
+  font-size: 2rem;
+  padding-bottom: 3rem;
+}
+
+.maininfo-right li p:first-child {
+  font-size: 2.4rem;
+}
+
+.yltext {
+  color: yellow;
+}
+.ylbar {
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+  margin: 2rem 0 1rem;
+}
+@media (max-width: 1400px) {
+  .maintop {
+    padding-top: 10rem;
+    margin: 0 8rem;
+  }
+  .maintoptext {
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 4rem;
+  }
+  .pricecartbox {
+    /* gap: 20rem; */
+  }
+  .pricecartbox img {
+    width: 20%;
+  }
+  .maintop-right img {
+    /* padding-bottom: 10rem; */
+  }
+
+  .maininfo-left img {
+    width: 70%;
+  }
+
+  .maininfo-right li {
+    font-size: 1.6rem;
+    padding-bottom: 3rem;
+  }
+
+  .maininfo-right li p:first-child {
+    font-size: 2rem;
+  }
+
+  .maininfo {
+    padding-bottom: 0rem;
+    margin: 0 1rem;
+  }
+
+  .maininfo-right li p {
+    width: 98%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .maintop {
+    margin: 0 5rem;
+  }
+  .maintop-right img {
+    /* padding-bottom: 10rem; */
+    width: 75%;
+  }
+  .price {
+    font-size: 3.6rem;
+  }
+  .pricecartbox {
+    /* gap: 18rem; */
+  }
+
+  .maininfo {
+    margin: 0 auto;
+  }
+
+  .maininfo-left img {
+    width: 70%;
+  }
+  .ylbar {
+    width: 90%;
+  }
+
+  .maininfo-right {
+    width: 50%;
+  }
+
+  .maininfo-right li p {
+    width: 89%;
+  }
+
+  .maininfo {
+    margin: 0 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .maintop {
+    margin: 0 5rem;
+    padding-top: 6rem;
+  }
+
+  .maintoptext {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .mainlogo {
+    padding-bottom: 3rem;
+  }
+
+  .maft {
+    padding-bottom: 1rem;
+  }
+
+  .price {
+    font-size: 3.2rem;
+  }
+  .pricecartbox {
+    /* gap: 10rem; */
+    padding-bottom: 5rem;
+  }
+  .pricecartbox img {
+    width: 20%;
+  }
+
+  .maintop-right img {
+    /* padding-left: 5rem;
+    padding-bottom: 5rem; */
+  }
+  .maininfo-left img {
+    width: 70%;
+  }
+
+  .maininfo-right li {
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
+  }
+
+  .maininfo-right li p:first-child {
+    font-size: 1.6rem;
+  }
+
+  .ylbar {
+    width: 95%;
+  }
+
+  .maininfo-right li p {
+    width: 95%;
+  }
+}
+
+@media (max-width: 875px) {
+  .price {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .maintop {
+    margin: 0 5rem;
+  }
+
+  .maintoptext {
+    font-size: 1.2rem;
+  }
+
+  .maintop-right img {
+    width: 90%;
+    left: 10%;
+  }
+
+  .price {
+    font-size: 2.4rem;
+  }
+
+  .maininfo-left img {
+    width: 80%;
+  }
+
+  .maininfo-right li {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .price {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .maintop {
+    flex-flow: column;
+  }
+
+  .maintop-left {
+    width: 100%;
+  }
+  .maintop-right {
+    width: 100%;
+    padding-bottom: 3rem;
+  }
+
+  .maintop-right img {
+    width: 90%;
+    left: 5%;
+  }
+
+  .maintoptext {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 3.2rem;
+  }
+
+  .maininfo {
+    flex-flow: column;
+  }
+  .maininfo-left {
+    width: 100%;
+  }
+
+  .maininfo-left img {
+    width: 60%;
+    padding-bottom: 2rem;
+  }
+  .maininfo-right {
+    width: 90%;
+    text-align: center;
+  }
+
+  .maininfo-right li p {
+    width: 85%;
+    margin: 0 auto;
+  }
+  .ylbar {
+    margin: 2rem auto 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .price {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .price {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 378px) {
+  .price {
+    font-size: 2rem;
+  }
+}
+/*-----------------------------------*\
+  #shopcard
+\*-----------------------------------*/
+
+.shoppingcard {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  margin: 5rem 5rem;
+}
+
+.cardimg {
+  display: flex;
+  justify-content: center;
+}
+.cardimg img {
+  width: 110%;
+}
+
+.shopcard {
+  display: flex;
+  flex-flow: column;
+  color: white;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url(../image/購入カード.png);
+  background-size: cover;
+
+  padding: 4rem 3rem;
+
+  width: 50%;
+  border-radius: 2rem;
+}
+
+.cardinfo ul li {
+  text-align: center;
+  padding: 2.8rem 0;
+
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.shopcart {
+  margin: 0 auto;
+  background-color: azure;
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .shoppingcard {
+    gap: 3rem;
+  }
+  .cardimg {
+    display: flex;
+    justify-content: center;
+  }
+  .cardimg img {
+    width: 100%;
+  }
+  .shopcard {
+    padding: 3rem 2rem;
+  }
+  .cardinfo ul li {
+    text-align: center;
+    padding: 2.2rem 0;
+
+    font-weight: 900;
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 1200px) {
+  .shoppingcard {
+    margin: 5rem 2rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 1125px) {
+  .shopxbox {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .shoppingcard {
+    width: 120%;
+    gap: 3rem;
+    scroll-snap-align: center;
+  }
+
+  .cardimg img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .shopxbox {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .shoppingcard {
+    width: 140%;
+    gap: 3rem;
+    scroll-snap-align: center;
+  }
+
+  .cardimg img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 850px) {
+  .shoppingcard {
+    width: 140%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .shoppingcard {
+    width: 160%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .shoppingcard {
+    width: 180%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 610px) {
+  .shoppingcard {
+    width: 200%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .shoppingcard {
+    width: 220%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .shoppingcard {
+    width: 260%;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .shoppingcard {
+    width: 300%;
+    gap: 2rem;
+  }
+}
+/*-----------------------------------*\
+  #barna
+\*-----------------------------------*/
+
+.barna {
+  background-image: url(../image/VIP-LP5-PC16.9.png);
+  background-size: cover;
+  background-position: center;
+
+  overflow-x: hidden;
+}
+
+.barnainfo {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 25rem;
+
+  font-size: 3.2rem;
+  font-family: "Zen Old Mincho", serif;
+}
+
+.barnainfo1 p {
+  color: white;
+  writing-mode: vertical-rl;
+}
+
+.barnainfo2 p {
+  /* color: white; */
+  writing-mode: vertical-rl;
+  /* padding: 0 20rem; */
+  color: yellow;
+}
+
+.barnainfo3 p {
+  color: white;
+  writing-mode: vertical-rl;
+}
+
+@media (max-width: 1400px) {
+  .barnainfo {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .barnainfo {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 1125px) {
+  .barnainfo {
+    gap: 20rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .barna {
+    background-image: url(../image/VIP-LP5-PC4.3.png);
+  }
+
+  .barnainfo {
+    font-size: 2.2rem;
+    gap: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .barnainfo {
+    font-size: 1.8rem;
+  }
+
+  .barnainfo {
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .barnainfo {
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .barnainfo {
+    font-size: 1.4rem;
+  }
+
+  .barnainfo {
+    gap: 4rem;
+  }
+}
+/*-----------------------------------*\
+  #honeyinfo
+\*-----------------------------------*/
+.infotit {
+  font-family: "Zen Old Mincho", serif;
+  color: white;
+  text-align: center;
+  margin: 8rem auto;
+}
+
+.infotit h1 {
+  font-size: 5.2rem;
+  padding-bottom: 3rem;
+  color: yellow;
+}
+
+.infotit p {
+  font-size: 3.2rem;
+  letter-spacing: 1.2rem;
+}
+
+.infomainbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+
+  justify-items: center;
+  align-items: center;
+
+  color: white;
+
+  margin: 0 20rem;
+}
+
+.infoimgbox1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.infotextbox1 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.infotextbox2 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.infoimgbox2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
+.infoimgbox3 {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.infotextbox3 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.infomainbox img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.infomainbox h1 {
+  font-weight: 200;
+  font-size: 3rem;
+  letter-spacing: 1.2rem;
+  padding-bottom: 3rem;
+  color: yellow;
+}
+
+.infomainbox p {
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+}
+
+.infoimgbox2 {
+  transform: rotate(10deg);
+}
+
+.infoimgbox1 img {
+  width: 70%;
+}
+.infoimgbox2 img {
+  width: 50%;
+}
+
+@media (max-width: 1400px) {
+  .infomainbox {
+    margin: 0 10rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .infotit h1 {
+    font-size: 4.2rem;
+  }
+  .infotit p {
+    font-size: 2.8rem;
+  }
+
+  .infomainbox h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1.2rem;
+  }
+
+  .infomainbox p {
+    font-size: 1.4rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media (max-width: 1125px) {
+  .infotit p {
+    letter-spacing: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .infotit h1 {
+    font-size: 3.8rem;
+  }
+  .infotit p {
+    font-size: 2.4rem;
+    letter-spacing: 0.6rem;
+  }
+
+  .infomainbox h1 {
+    font-size: 2.4rem;
+    letter-spacing: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .infomainbox p {
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media (max-width: 875px) {
+  .infotit p {
+    letter-spacing: 0.8rem;
+  }
+
+  .infomainbox h1 {
+    padding-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .infotit p {
+    letter-spacing: 0.4rem;
+  }
+
+  .infomainbox h1 {
+    letter-spacing: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .infotit h1 {
+    font-size: 3.4rem;
+  }
+  .infotit p {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .infomainbox {
+    margin: 0 8rem;
+    grid-row-gap: 3rem;
+  }
+  .infomainbox h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.6rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .infomainbox p {
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .infotit p {
+    letter-spacing: 0.5rem;
+  }
+
+  .infomainbox h1 {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .infotit p {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+  .infomainbox {
+    margin: 0 5rem;
+    grid-row-gap: 1rem;
+  }
+
+  .infomainbox h1 {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+  }
+  .infomainbox p {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .infotit {
+    margin: 4rem auto;
+  }
+
+  .infotit h1 {
+    font-size: 3rem;
+  }
+
+  .infotit p {
+    font-size: 1.4rem;
+  }
+
+  .infomainbox h1 {
+    letter-spacing: 0.1rem;
+  }
+
+  .infomainbox {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 0.6fr);
+
+    text-align: center;
+    margin: 0 5rem;
+  }
+
+  .infoimgbox1 {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .infotextbox1 {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .infotextbox2 {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .infoimgbox2 {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .infoimgbox3 {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+  .infotextbox3 {
+    grid-area: 6 / 1 / 7 / 2;
+  }
+}
+
+@media (max-width: 450px) {
+  .infotit h1 {
+    font-size: 2.8rem;
+  }
+
+  .infotit p {
+    letter-spacing: 0rem;
+  }
+
+  .infomainbox h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0rem;
+  }
+
+  .infomainbox p {
+    font-size: 1rem;
+  }
+}
+
+/*-----------------------------------*\
+  #honeyingredients
+\*-----------------------------------*/
+
+.honeyingredients {
+  display: flex;
+  flex-flow: column;
+
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  padding-bottom: 20rem;
+}
+
+.honeypackage {
+  display: flex;
+  justify-content: center;
+}
+.honeypackage img {
+  width: 100%;
+}
+
+.hitext {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2.8rem;
+  padding-bottom: 8rem;
+  color: yellow;
+}
+
+.hilist {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+  gap: 5rem;
+}
+
+.hilist1 {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20rem;
+  margin: 0 auto;
+
+  font-size: 3.2rem;
+}
+
+.hilist1 p {
+  white-space: nowrap;
+}
+
+.hilistleft {
+  display: flex;
+
+  /* font-size: 3.2rem; */
+  align-items: center;
+  justify-content: left;
+
+  gap: 5rem;
+}
+
+.hilistleft img {
+  width: 140px;
+}
+
+.hilistright {
+  /* font-size: 3.2rem; */
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .honeypackage img {
+    width: 90%;
+  }
+
+  .hitext {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hitext {
+    font-size: 2rem;
+  }
+
+  .hilist1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .hitext {
+    font-size: 1.8rem;
+  }
+
+  .hilist1 {
+    font-size: 2.2rem;
+
+    gap: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .honeyingredients {
+    padding-bottom: 10rem;
+  }
+
+  .honeypackage img {
+    width: 80%;
+  }
+
+  .hitext {
+    font-size: 1.6rem;
+  }
+
+  .hilist1 {
+    gap: 10rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .hitext {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .honeyingredients {
+    padding-bottom: 5rem;
+  }
+
+  .honeypackage img {
+    width: 60%;
+  }
+
+  .hitext {
+    font-size: 1.2rem;
+  }
+
+  .hilist1 {
+    font-size: 1.8rem;
+    gap: 5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .hitext {
+    font-size: 1rem;
+  }
+
+  .hilist1 {
+    font-size: 1.4rem;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hitext {
+    font-size: 1rem;
+    text-align: center;
+    width: 80%;
+  }
+
+  .hilistleft {
+    gap: 2rem;
+  }
+
+  .hilistleft img {
+    width: 120px;
+  }
+
+  .hilist1 {
+    font-size: 1.4rem;
+    gap: 1rem;
+  }
+}
+/*-----------------------------------*\
+  #barna2
+\*-----------------------------------*/
+
+.barna2info {
+  background-image: url(../image/VIP-LP6-PC16.9.png);
+  background-size: cover;
+  min-height: 100vh;
+
+  color: white;
+}
+
+.barna2info h1 {
+  padding-top: 20rem;
+  padding-bottom: 5rem;
+  padding-left: 30rem;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 8rem;
+  letter-spacing: 1.2rem;
+}
+
+.barna2info img {
+  padding-top: 2rem;
+  padding-left: 30rem;
+}
+
+@media (max-width: 1400px) {
+  .barna2info h1 {
+    font-size: 2.8rem;
+    line-height: 6rem;
+  }
+
+  .barna2info img {
+    width: 45%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .barna2info h1 {
+    font-size: 2.4rem;
+    line-height: 4.6rem;
+    padding-bottom: 3rem;
+    padding-left: 20rem;
+  }
+
+  .barna2info img {
+    width: 50%;
+    padding-left: 20rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .barna2info {
+    background-image: url(../image/VIP-LP6-PC4.3.png);
+  }
+
+  .barna2info h1 {
+    font-size: 2rem;
+    line-height: 4.2rem;
+    padding-bottom: 3rem;
+    padding-left: 15rem;
+  }
+
+  .barna2info img {
+    width: 50%;
+    padding-left: 15rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .barna2info h1 {
+    font-size: 1.8rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 10rem;
+  }
+
+  .barna2info img {
+    width: 50%;
+    padding-left: 10rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .barna2info h1 {
+    font-size: 1.4rem;
+    line-height: 3rem;
+    padding-bottom: 1rem;
+    padding-left: 8rem;
+  }
+  .barna2info img {
+    width: 60%;
+    padding-left: 8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .barna2info h1 {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.8rem;
+  }
+}
+/*-----------------------------------*\
+  #ed
+\*-----------------------------------*/
+
+.ed {
+  background-image: url(../image/VIP-LP7-16.9.png);
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.edbar {
+  width: 100%;
+  height: 2px;
+  background-color: yellow;
+  margin: 1.5rem 0 1rem;
+}
+
+.edtext {
+  padding-left: 25rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+
+  color: white;
+
+  width: 60%;
+
+  margin: 5rem 0rem;
+}
+
+.edtext h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2.4rem;
+  letter-spacing: 1rem;
+  color: yellow;
+}
+
+.edtext li {
+  padding-bottom: 2.8rem;
+}
+
+@media (max-width: 1400px) {
+  .edtext {
+    font-size: 1.2rem;
+  }
+  .edtext h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1rem;
+  }
+  .edtext li {
+    padding-bottom: 2.2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .edtext {
+    font-size: 1.2rem;
+  }
+  .edtext h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1rem;
+  }
+  .edtext li {
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .ed {
+    background-image: url(../image/VIP-LP7-4.3.png);
+  }
+
+  .edtext {
+    padding-left: 15rem;
+    font-size: 1.2rem;
+  }
+  .edtext h1 {
+    font-size: 1.6rem;
+    letter-spacing: 1rem;
+  }
+  .edtext li {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .edbar {
+    margin: 1rem 0 1rem;
+  }
+
+  .edtext {
+    padding-left: 10rem;
+    font-size: 1rem;
+  }
+  .edtext h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .edtext {
+    margin: 0 auto;
+    padding-left: 0rem;
+    text-align: center;
+    width: 80%;
+  }
+  .edtext h1 {
+    font-size: 1.4rem;
+  }
+  .edtext p {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .edbar {
+    margin: 0.8rem 0 0.6rem;
+  }
+}
+
+/*-----------------------------------*\
+  #honeyme
+\*-----------------------------------*/
+
+.honeyme {
+  margin-top: 12rem;
+  color: white;
+  padding-bottom: 12rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.metit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+  gap: 3rem;
+
+  margin: 0 5rem;
+}
+
+.metit img {
+  width: 30%;
+}
+
+.metit h1 {
+  font-family: "Zen Old Mincho", serif;
+  letter-spacing: 1.2rem;
+  font-weight: 400;
+  color: yellow;
+  font-size: 4rem;
+}
+
+.metibox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin: 0 30rem;
+}
+
+.metext h1 {
+  font-size: 3rem;
+  line-height: 7.2rem;
+  padding-bottom: 2rem;
+  font-weight: 100;
+  letter-spacing: 1.2rem;
+  padding-bottom: 5rem;
+}
+
+.metext p {
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 2.8rem;
+  padding-bottom: 3rem;
+  color: #999;
+}
+
+.meimgbox img {
+  width: 120%;
+}
+
+@media (max-width: 1400px) {
+  .metext {
+    width: 150%;
+  }
+
+  .metibox {
+    gap: 12rem;
+    margin: 0 15rem;
+  }
+
+  .metit h1 {
+    font-size: 3rem;
+  }
+
+  .metit img {
+    width: 30%;
+  }
+  .metext h1 {
+    font-size: 3.2rem;
+    line-height: 5.2rem;
+  }
+  .metext p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+  .meimgbox img {
+    width: 120%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .metit img {
+    width: 25%;
+  }
+  .metibox {
+    gap: 5rem;
+    margin: 0 10rem;
+  }
+  .metext h1 {
+    font-size: 2.8rem;
+    line-height: 4.2rem;
+    width: 200%;
+  }
+  .metext p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    width: 80%;
+  }
+
+  .honeyme {
+    margin-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .meimgbox img {
+    width: 100%;
+  }
+
+  .metit h1 {
+    font-size: 2.8rem;
+  }
+
+  .metit img {
+    width: 35%;
+  }
+}
+
+@media (max-width: 1125px) {
+  .metit img {
+    width: 30%;
+  }
+
+  .metit h1 {
+    font-size: 2.6rem;
+    letter-spacing: 0.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .metibox {
+    margin: 0 8rem;
+  }
+
+  .metit h1 {
+    font-size: 2.2rem;
+  }
+
+  .metit img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 850px) {
+  .metit {
+    gap: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .metit {
+    flex-flow: column;
+
+    justify-content: left;
+    padding-bottom: 3rem;
+  }
+
+  .metit img {
+    width: 60%;
+  }
+
+  .metext h1 {
+    font-size: 2rem;
+    line-height: 3.8rem;
+    width: 170%;
+  }
+  .metext p {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    width: 90%;
+  }
+  .metibox {
+    margin: 0 6rem;
+
+    gap: 0rem;
+  }
+
+  .metit h1 {
+    font-size: 2.8rem;
+    letter-spacing: 0.6rem;
+  }
+
+  .metit {
+    gap: 1rem;
+  }
+
+  .meimgbox img {
+    width: 110%;
+  }
+}
+
+@media (max-width: 610px) {
+  .metit h1 {
+    font-size: 2.4rem;
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .metit img {
+    width: 65%;
+  }
+
+  .metibox {
+    flex-flow: column;
+  }
+  .metext {
+    width: 100%;
+  }
+
+  .metext h1 {
+    line-height: 3rem;
+    width: 100%;
+
+    padding-bottom: 3rem;
+
+    text-align: center;
+
+    margin: 0 auto;
+  }
+  .metext p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    width: 100%;
+    margin: 0 auto;
+
+    padding-bottom: 1rem;
+  }
+
+  .meimgbox img {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .metibox {
+    gap: 5rem;
+  }
+
+  .metit h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .metit h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+  }
+
+  .metext h1 {
+    letter-spacing: 0.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .metit img {
+    width: 70%;
+  }
+  .metit h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .metext h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.2rem;
+  }
+}
+/*-----------------------------------*\
+  #infotext
+\*-----------------------------------*/
+
+.infotext {
+  overflow-x: hidden;
+}
+
+.infotext-bg {
+  background-image: url(../image/VIP-LP8-16.9.png);
+  background-size: cover;
+  min-height: 100vh;
+
+  color: white;
+}
+
+.infotext h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  padding-top: 30rem;
+  /* padding-left: 80rem; */
+  font-size: 3.2rem;
+  line-height: 8rem;
+  letter-spacing: 1rem;
+
+  position: relative;
+  left: 50%;
+}
+
+.infotext-logo {
+  padding-top: 4rem;
+  /* padding-left: 80rem; */
+  position: relative;
+  left: 50%;
+}
+
+.infotext-logo img {
+  width: 25%;
+}
+
+@media (max-width: 1400px) {
+  .infotext h1 {
+    /* padding-left: 60rem; */
+    font-size: 2.4rem;
+    line-height: 6rem;
+    padding-top: 25rem;
+
+    letter-spacing: 0.8rem;
+
+    left: 45%;
+  }
+
+  .infotext-logo {
+    padding-top: 3rem;
+    /* padding-left: 60rem; */
+    left: 45%;
+  }
+
+  .infotext-logo img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .infotext h1 {
+    /* padding-left: 50rem; */
+    font-size: 2.2rem;
+    line-height: 5.2rem;
+    padding-top: 20rem;
+  }
+
+  .infotext-logo {
+    padding-top: 3rem;
+    /* padding-left: 50rem; */
+  }
+
+  .infotext-logo img {
+    width: 25%;
+  }
+}
+
+@media (max-width: 1125px) {
+  .infotext h1 {
+    left: 35%;
+  }
+
+  .infotext-logo {
+    /* padding-left: 35rem; */
+    left: 35%;
+  }
+}
+
+@media (max-width: 992px) {
+  .infotext-bg {
+    background-image: url(../image/VIP-LP8-4.3.png);
+  }
+
+  .infotext h1 {
+    /* padding-left: 35rem; */
+    font-size: 2rem;
+
+    left: 35%;
+  }
+
+  .infotext-logo {
+    /* padding-left: 35rem; */
+    left: 35%;
+  }
+
+  .infotext-logo img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 850px) {
+  .infotext h1 {
+    left: 25%;
+  }
+
+  .infotext-logo {
+    /* padding-left: 35rem; */
+    left: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .infotext h1 {
+    /* padding-left: 25rem; */
+    line-height: 4.6rem;
+    letter-spacing: 0.6rem;
+    font-size: 2rem;
+  }
+
+  .infotext-logo {
+    /* padding-left: 25rem; */
+  }
+
+  .infotext-logo img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 676px) {
+  .infotext h1 {
+    left: 20%;
+    letter-spacing: 0.4rem;
+    font-size: 1.8rem;
+  }
+  .infotext-logo {
+    left: 20%;
+  }
+
+  .infotext-logo img {
+    width: 35%;
+  }
+}
+
+@media (max-width: 575px) {
+  .infotext h1 {
+    left: 15%;
+  }
+  .infotext-logo {
+    left: 15%;
+  }
+}
+
+@media (max-width: 450px) {
+  .infotext h1 {
+    font-size: 1.4rem;
+    line-height: 3.2rem;
+  }
+  .infotext-logo img {
+    width: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .infotext h1 {
+    font-size: 1.2rem;
+    line-height: 3.2rem;
+
+    letter-spacing: 0.2rem;
+  }
+  .infotext-logo img {
+    width: 45%;
+  }
+}
+
+/*-----------------------------------*\
+  #infotext2
+\*-----------------------------------*/
+
+.infotext2 {
+  overflow-x: hidden;
+}
+
+.infotext-bg2 {
+  background-image: url(../image/VIP-LP9-16.9.png);
+  background-size: cover;
+  min-height: 100vh;
+
+  color: white;
+}
+
+.infotext2 h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 400;
+  padding-top: 30rem;
+  /* padding-left: 40rem; */
+  font-size: 3.2rem;
+  line-height: 10rem;
+  letter-spacing: 1rem;
+  color: yellow;
+
+  position: relative;
+  left: 25%;
+}
+
+.infotext2 h1 + p {
+  /* padding-left: 40rem; */
+  font-size: 2.2rem;
+  font-weight: 100;
+  letter-spacing: 1rem;
+}
+
+.infotext2 p {
+  padding-top: 3rem;
+  /* padding-left: 40rem; */
+  font-size: 2.2rem;
+  font-family: "Zen Old Mincho", serif;
+  line-height: 4rem;
+  letter-spacing: 1.2rem;
+  font-weight: 100;
+
+  position: relative;
+  left: 25%;
+}
+
+@media (max-width: 1400px) {
+  .infotext2 h1 {
+    padding-top: 25rem;
+    /* padding-left: 30rem; */
+  }
+  .infotext2 h1 + p {
+    /* padding-left: 30rem; */
+    font-size: 2.2rem;
+
+    letter-spacing: 1rem;
+  }
+  .infotext2 p {
+    /* padding-left: 30rem; */
+    font-size: 2.2rem;
+    line-height: 4rem;
+    letter-spacing: 1.2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .infotext2 h1 {
+    padding-top: 20rem;
+    /* padding-left: 25rem; */
+  }
+  .infotext2 h1 + p {
+    /* padding-left: 25rem; */
+    font-size: 2rem;
+
+    letter-spacing: 1rem;
+  }
+  .infotext2 p {
+    /* padding-left: 25rem; */
+    font-size: 2rem;
+    line-height: 4rem;
+    letter-spacing: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .infotext-bg2 {
+    background-image: url(../image/VIP-LP9-4.3.png);
+  }
+
+  .infotext2 h1 {
+    /* padding-left: 15rem; */
+    font-size: 2.8rem;
+  }
+  .infotext2 h1 + p {
+    /* padding-left: 15rem; */
+    font-size: 1.8rem;
+  }
+  .infotext2 p {
+    /* padding-left: 15rem; */
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .infotext2 h1 {
+    font-size: 2.4rem;
+  }
+
+  .infotext2 p {
+    /* padding-left: 15rem; */
+    font-size: 1.4rem;
+    line-height: 3rem;
+    letter-spacing: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .infotext2 h1 {
+    padding-top: 20rem;
+
+    font-size: 2.2rem;
+
+    left: 20%;
+  }
+
+  .infotext2 p {
+    line-height: 2rem;
+    left: 20%;
+  }
+}
+
+@media (max-width: 676px) {
+  .infotext2 h1 {
+    font-size: 2rem;
+    left: 20%;
+
+    letter-spacing: 0.8rem;
+  }
+
+  .infotext2 p {
+    left: 20%;
+    font-size: 1.2rem;
+
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .infotext2 h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .infotext2 p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .infotext2 h1 {
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+
+    line-height: 4rem;
+  }
+
+  .infotext2 h1 + p {
+    font-size: 1.6rem;
+    letter-spacing: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .infotext2 h1 {
+    left: 10%;
+  }
+
+  .infotext2 p {
+    left: 10%;
+  }
+}
+
+/*-----------------------------------*\
+  #fotbarna
+\*-----------------------------------*/
+
+.fbimg {
+  display: flex;
+  justify-content: center;
+  padding: 15rem 0;
+}
+
+@media (max-width: 1400px) {
+  .fbimg {
+    padding: 10rem 0;
+  }
+  .fbimg img {
+    width: 70%;
+  }
+}
+
+/*-----------------------------------*\
+  #custvoice
+\*-----------------------------------*/
+
+.custvoice {
+  color: white;
+}
+
+.ctit {
+  font-family: "Zen Old Mincho", serif;
+  text-align: center;
+  padding-bottom: 5rem;
+  letter-spacing: 1.2rem;
+  font-weight: 400;
+}
+
+.ctit h1 {
+  font-size: 4.2rem;
+}
+
+.cvtextbox {
+  display: grid;
+  gap: 3rem;
+}
+
+.cvtit1 {
+  display: flex;
+  justify-content: left;
+  width: 60%;
+  margin: 0 auto;
+  background-image: url(../image/購入カード.jpg);
+  background-size: cover;
+  padding: 3rem;
+
+  flex-flow: column;
+}
+
+.cvtit1 p {
+  font-size: 1.8rem;
+}
+
+.cvtit1 p:first-child {
+  padding-bottom: 1rem;
+}
+
+.cvtext1 {
+  display: flex;
+  margin: 2rem auto;
+  justify-content: left;
+  width: 60%;
+  background-color: #333;
+
+  padding: 3rem;
+
+  font-size: 1.6rem;
+}
+
+.morecv {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+@media (max-width: 1400px) {
+  .ctit h1 {
+    font-size: 4rem;
+  }
+
+  .cvtit1 p {
+    font-size: 1.6rem;
+  }
+
+  .cvtext1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .cvtit1 {
+    width: 70%;
+  }
+
+  .cvtext1 {
+    width: 70%;
+  }
+
+  .ctit h1 {
+    font-size: 3.6rem;
+  }
+
+  .cvtit1 p {
+    /* font-size: 1.4rem; */
+  }
+
+  .cvtext1 {
+    /* font-size: 1.2rem; */
+  }
+}
+
+@media (max-width: 992px) {
+  .ctit h1 {
+    font-size: 3rem;
+  }
+
+  .cvtit1 p {
+    font-size: 1.4rem;
+  }
+
+  .cvtext1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ctit h1 {
+    font-size: 2.4rem;
+  }
+
+  .cvtit1 p {
+    font-size: 1.2rem;
+  }
+
+  .cvtext1 {
+    font-size: 1rem;
+  }
+
+  .morecv img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  .cvtit1 {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .cvtext1 {
+    text-align: center;
+  }
+
+  .morecv img {
+    width: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  .morecv img {
+    width: 60%;
+  }
+}
+/*-----------------------------------*\
+  #qabox
+\*-----------------------------------*/
+
+.qabox {
+  color: white;
+}
+.qatit h1 {
+  font-size: 4.2rem;
+}
+
+.qatit {
+  font-family: "Zen Old Mincho", serif;
+  letter-spacing: 1.2rem;
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.qatextbox {
+  display: grid;
+  gap: 3rem;
+}
+
+.qatit1 {
+  display: flex;
+  justify-content: left;
+  width: 60%;
+  margin: 0 auto;
+  background-image: url(../image/購入カード.jpg);
+  background-size: cover;
+
+  padding: 3rem;
+}
+
+.qatit1 p {
+  font-size: 1.8rem;
+}
+
+.qatext1 {
+  display: flex;
+  margin: 2rem auto;
+  justify-content: left;
+  width: 60%;
+  background-color: #333;
+
+  padding: 3rem;
+  font-size: 1.6rem;
+}
+
+.moreqa {
+  display: flex;
+  justify-content: center;
+  margin: 5rem auto;
+}
+
+@media (max-width: 1400px) {
+  .qatit h1 {
+    font-size: 4rem;
+  }
+
+  .qatit1 p {
+    font-size: 1.6rem;
+  }
+
+  .qatext1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .qatit1 {
+    width: 70%;
+  }
+
+  .qatext1 {
+    width: 70%;
+  }
+
+  .qatit h1 {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .qatit h1 {
+    font-size: 3rem;
+  }
+
+  .qatit1 p {
+    font-size: 1.4rem;
+  }
+
+  .qatext1 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .qatit h1 {
+    font-size: 2.4rem;
+  }
+
+  .qatit1 p {
+    font-size: 1.2rem;
+  }
+
+  .qatext1 {
+    font-size: 1rem;
+  }
+
+  .moreqa img {
+    width: 50%;
+  }
+}
+
+@media (max-width: 575px) {
+  .qatit1 {
+    justify-content: center;
+    text-align: center;
+
+    padding: 1.4rem;
+  }
+
+  .qatext1 {
+    text-align: center;
+  }
+
+  .moreqa img {
+    width: 55%;
+  }
+}
+
+@media (max-width: 450px) {
+  .moreqa img {
+    width: 60%;
+  }
+}
+
+/*-----------------------------------*\
+  #moreshopinfo
+\*-----------------------------------*/
+
+.moreshopbar {
+  width: 60%;
+
+  background-image: url(../image/購入カード.jpg);
+  background-size: cover;
+
+  margin: 5rem auto;
+
+  padding: 3rem;
+}
+
+.moreshopbar h1 {
+  font-family: "Zen Old Mincho", serif;
+  letter-spacing: 1.2rem;
+  font-size: 2.2rem;
+  color: white;
+  text-align: center;
+}
+
+.moreshopinfo {
+  display: flex;
+
+  width: 100%;
+  flex-flow: column;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.infoimg1 {
+  display: flex;
+  justify-content: center;
+}
+
+.infoimg2 {
+  display: flex;
+  justify-content: center;
+}
+
+.infoimg3 {
+  display: flex;
+  justify-content: center;
+}
+
+.infoimg4 {
+  display: flex;
+  justify-content: center;
+}
+
+.infoimg5 {
+  display: flex;
+  justify-content: center;
+}
+
+.infoimg6 {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 1400px) {
+  .infoimg1 img {
+    width: 60%;
+  }
+  .infoimg2 img {
+    width: 60%;
+  }
+  .infoimg3 img {
+    width: 60%;
+  }
+  .infoimg4 img {
+    width: 60%;
+  }
+  .infoimg5 img {
+    width: 60%;
+  }
+  .infoimg6 img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .moreshopbar {
+    padding: 2rem;
+  }
+
+  .infoimg1 img {
+    width: 70%;
+  }
+  .infoimg2 img {
+    width: 70%;
+  }
+  .infoimg3 img {
+    width: 70%;
+  }
+  .infoimg4 img {
+    width: 70%;
+  }
+  .infoimg5 img {
+    width: 70%;
+  }
+  .infoimg6 img {
+    width: 70%;
+  }
+}
+
+@media (max-width: 660px) {
+  .moreshopinfo {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .moreshopbar {
+    padding: 2rem;
+  }
+  .moreshopbar h1 {
+    letter-spacing: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .moreshopbar {
+    padding: 1.4rem;
+  }
+
+  .moreshopbar h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .infoimg1 img {
+    width: 80%;
+  }
+  .infoimg2 img {
+    width: 80%;
+  }
+  .infoimg3 img {
+    width: 80%;
+  }
+  .infoimg4 img {
+    width: 80%;
+  }
+  .infoimg5 img {
+    width: 80%;
+  }
+  .infoimg6 img {
+    width: 80%;
+  }
+}
+/*-----------------------------------*\
+  #fotinfo
+\*-----------------------------------*/
+.fotinfo {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.fottit {
+  display: flex;
+  justify-content: center;
+
+  margin: 3rem;
+}
+
+.fottit h1 {
+  font-size: 3.4rem;
+}
+
+.fotinfobox {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.fotinfobox-left {
+  width: 50%;
+}
+.fotinfobox-right {
+  width: 50%;
+}
+
+.fotinfo {
+  color: white;
+}
+
+.finfotit {
+  background-color: #222;
+  width: 95%;
+  margin-bottom: 2rem;
+}
+.finfotit p {
+  font-weight: 500;
+  letter-spacing: 0.4rem;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  font-size: 1.6rem;
+}
+
+.finfotext {
+  font-size: 1.4rem;
+  font-weight: 100;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  line-height: 3.2rem;
+  width: 90%;
+}
+
+@media (max-width: 1400px) {
+  .fottit h1 {
+    font-size: 3.2rem;
+  }
+  .finfotit p {
+    font-size: 1.4rem;
+  }
+  .finfotext {
+    font-size: 1.2rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .fottit h1 {
+    font-size: 3rem;
+  }
+  .finfotit p {
+    font-size: 1.2rem;
+  }
+  .finfotext {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .fottit h1 {
+    font-size: 2.8rem;
+  }
+
+  .finfotit {
+    margin-bottom: 1rem;
+  }
+
+  .finfotit p {
+    font-size: 1.2rem;
+  }
+  .finfotext {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .fotinfobox {
+    flex-flow: column;
+    text-align: center;
+
+    width: 80%;
+  }
+  .fotinfobox-left {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .fotinfobox-right {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .fottit h1 {
+    font-size: 2.4rem;
+  }
+
+  .finfotit {
+    margin-bottom: 1rem;
+
+    width: 100%;
+  }
+
+  .finfotit p {
+    font-size: 1.2rem;
+  }
+  .finfotext {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1.2rem;
+    padding-left: 0rem;
+    width: 90%;
+
+    margin: 0 auto 2rem;
+  }
+}
+
+/*-----------------------------------*\
+  #fotinfo
+\*-----------------------------------*/
+
+.fotlogo {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+
+@media (max-width: 1200px) {
+  .fotlogo img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 575px) {
+  .fotlogo img {
+    width: 50%;
+  }
+}
+
+/*-----------------------------------*\
+  #copyright
+\*-----------------------------------*/
+
+.copyright p {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  padding-bottom: 5rem;
+}
+
+@media (max-width: 1200px) {
+  .copyright p {
+    font-size: 1rem;
+  }
+}
