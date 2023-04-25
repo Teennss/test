@@ -1941,16 +1941,19 @@ body {
 }
 
 .barnainfo2 p {
-  /* color: white; */
+  color: white;
   /* writing-mode: vertical-rl; */
   -epub-writing-mode: vertical-rl;
 
   /* padding: 0 20rem; */
-  color: yellow;
+  
 
   /* border: 2px solid yellow; */
 
+}
 
+.barnainfo2 p:nth-child(2){
+  color: yellow;
 }
 
 .barnainfo3 p {
@@ -2009,6 +2012,12 @@ body {
   }
 }
 
+@media (max-width: 400px) {
+  .barnainfo2 {
+    width: 100%;
+  }
+}
+
 @media (max-width: 450px) {
   .barnainfo {
     font-size: 1.4rem;
@@ -2021,8 +2030,8 @@ body {
 
 @media (max-width: 360px) {
 
-  .barnainfo {
-    /* gap: 2rem; */
+  .barnainfo{
+    font-size: 1.2rem;
   }
 }
 /*-----------------------------------*\
