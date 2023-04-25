@@ -54,6 +54,8 @@ ion-icon {
   pointer-events: none;
 }
 
+p { max-height: 999999px; }
+
 html {
   font-size: 62.5%;
 
@@ -1795,6 +1797,8 @@ body {
   .shopxbox {
     overflow-x: auto;
     scroll-snap-type: none;
+    
+
   }
 
   .shoppingcard {
@@ -1812,6 +1816,7 @@ body {
   .shopxbox {
     overflow-x: auto;
     scroll-snap-type: none;
+
   }
 
   .shoppingcard {
@@ -1890,15 +1895,23 @@ body {
   background-position: center;
 
   overflow-x: hidden;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .barnainfo {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  gap: 25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+
+  /* gap: 25rem; */
+
 
   font-size: 3.2rem;
   font-family: "Zen Old Mincho", serif;
@@ -1943,7 +1956,7 @@ body {
 
 @media (max-width: 1125px) {
   .barnainfo {
-    gap: 20rem;
+    /* gap: 20rem; */
   }
 }
 
@@ -1954,7 +1967,7 @@ body {
 
   .barnainfo {
     font-size: 2.2rem;
-    gap: 15rem;
+    /* gap: 15rem; */
   }
 }
 
@@ -1964,13 +1977,13 @@ body {
   }
 
   .barnainfo {
-    gap: 10rem;
+    /* gap: 10rem; */
   }
 }
 
 @media (max-width: 575px) {
   .barnainfo {
-    gap: 5rem;
+    /* gap: 5rem; */
   }
 }
 
@@ -1980,14 +1993,14 @@ body {
   }
 
   .barnainfo {
-    gap: 4rem;
+    /* gap: 4rem; */
   }
 }
 
 @media (max-width: 360px) {
 
   .barnainfo {
-    gap: 2rem;
+    /* gap: 2rem; */
   }
 }
 /*-----------------------------------*\

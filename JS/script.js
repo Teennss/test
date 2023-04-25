@@ -35,3 +35,13 @@ btnNavcloseEl.addEventListener("click", function () {
         headerEl.classList.toggle("nav-open");
     });
   });
+
+
+  // scrollbar 
+
+  var element = document.querySelector('.shopxbox');
+  var scrollWidth = element.scrollWidth;
+  var clientWidth = element.clientWidth;
+  var scrollLeft = (scrollWidth - clientWidth) / 2;
+  element.scrollLeft = scrollLeft;
+  
