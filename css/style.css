@@ -1908,7 +1908,7 @@ body {
 .barnainfo {
 
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   width: 100%;
 
@@ -1917,6 +1917,10 @@ body {
 
   font-size: 3.2rem;
   font-family: "Zen Old Mincho", serif;
+
+  /* border: 2px solid red; */
+
+  
 }
 
 .barnainfo1 p {
@@ -1924,6 +1928,16 @@ body {
   /* writing-mode: vertical-rl; */
   -epub-writing-mode: vertical-rl;
 
+  /* border: 2px solid yellow; */
+
+}
+
+.barnainfo2{
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .barnainfo2 p {
@@ -1934,6 +1948,8 @@ body {
   /* padding: 0 20rem; */
   color: yellow;
 
+  /* border: 2px solid yellow; */
+
 
 }
 
@@ -1941,6 +1957,8 @@ body {
   color: white;
   /* writing-mode: vertical-rl; */
   -epub-writing-mode: vertical-rl;
+
+  /* border: 2px solid yellow; */
 
 }
 
