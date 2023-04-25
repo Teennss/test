@@ -72,6 +72,8 @@ body {
   font-family: "source-han-sans-japanese", sans-serif;
 
   max-width: 100%;
+
+  -webkit-text-size-adjust: 100%;
 }
 
 /*-----------------------------------*\
@@ -99,7 +101,7 @@ body {
 
 .yokobar {
   background-color: black;
-  /* display: ; */
+
   display: none;
   width: 50%;
   height: 100vh;
@@ -1908,10 +1910,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 100%;
 
   /* gap: 25rem; */
-
+  margin: 0 5rem;
 
   font-size: 3.2rem;
   font-family: "Zen Old Mincho", serif;
@@ -1931,6 +1933,8 @@ body {
 
   /* padding: 0 20rem; */
   color: yellow;
+
+
 }
 
 .barnainfo3 p {
