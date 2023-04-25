@@ -68,6 +68,8 @@ body {
 
   /* font-family: 'M PLUS 1p', sans-serif; */
   font-family: "source-han-sans-japanese", sans-serif;
+
+  max-width: 100%;
 }
 
 /*-----------------------------------*\
@@ -988,7 +990,7 @@ body {
   .sec2t3 h2 {
     font-size: 1.6rem;
     line-height: 3rem;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     left: 8%;
   }
 }
@@ -1191,7 +1193,7 @@ body {
     font-size: 1.6rem;
     line-height: 2.6rem;
     /* padding-left: 5rem; */
-    width: 200%;
+    /* width: 200%; */
     padding-top: 2rem;
   }
   .sec3t2 p {
@@ -1235,7 +1237,7 @@ body {
     font-size: 1.6rem;
     line-height: 2.4rem;
     /* padding-left: 15rem; */
-    width: 200%;
+    /* width: 200%; */
     padding-top: 1rem;
   }
   .sec3t2 p {
@@ -1274,7 +1276,7 @@ body {
     font-size: 1.6rem;
     line-height: 2.4rem;
     /* padding-left: 30rem; */
-    width: 200%;
+    /* width: 200%; */
 
     letter-spacing: 0.8rem;
   }
@@ -1792,7 +1794,7 @@ body {
 @media (max-width: 1125px) {
   .shopxbox {
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: none;
   }
 
   .shoppingcard {
@@ -1809,7 +1811,7 @@ body {
 @media (max-width: 992px) {
   .shopxbox {
     overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: none;
   }
 
   .shoppingcard {
@@ -1904,20 +1906,28 @@ body {
 
 .barnainfo1 p {
   color: white;
-  writing-mode: vertical-lr;
+  /* writing-mode: vertical-rl; */
+  -epub-writing-mode: vertical-rl;
+
 }
 
 .barnainfo2 p {
   /* color: white; */
-  writing-mode: vertical-lr;
+  /* writing-mode: vertical-rl; */
+  -epub-writing-mode: vertical-rl;
+
   /* padding: 0 20rem; */
   color: yellow;
 }
 
 .barnainfo3 p {
   color: white;
-  writing-mode: vertical-lr;
+  /* writing-mode: vertical-rl; */
+  -epub-writing-mode: vertical-rl;
+
 }
+
+
 
 @media (max-width: 1400px) {
   .barnainfo {
@@ -2265,9 +2275,6 @@ body {
   }
 }
 
-  .infotit p{
-    font-size: 1.2rem;
-  }
 /*-----------------------------------*\
   #honeyingredients
 \*-----------------------------------*/
@@ -2467,28 +2474,43 @@ body {
   #barna2
 \*-----------------------------------*/
 
-.barna2info {
+.barna2 {
   background-image: url(../image/VIP-LP6-PC16.9.png);
   background-size: cover;
+  background-repeat: no-repeat;
   min-height: 100vh;
 
   color: white;
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-flow: column;
 }
 
 .barna2info h1 {
-  padding-top: 20rem;
-  padding-bottom: 5rem;
+  /* padding-top: 20rem; */
+  padding-bottom: 3rem;
   padding-left: 30rem;
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
   font-size: 3.2rem;
   line-height: 8rem;
   letter-spacing: 1.2rem;
+
+  /* position: relative;
+  left: 30%; */
+
+
 }
 
-.barna2info img {
+.barna2imgbox img {
   padding-top: 2rem;
   padding-left: 30rem;
+  /* position: relative;
+  left: 30%; */
+
+  width: 45%;
 }
 
 @media (max-width: 1400px) {
@@ -2497,7 +2519,7 @@ body {
     line-height: 6rem;
   }
 
-  .barna2info img {
+  .barna2imgbox img {
     width: 45%;
   }
 }
@@ -2507,17 +2529,22 @@ body {
     font-size: 2.4rem;
     line-height: 4.6rem;
     padding-bottom: 3rem;
-    padding-left: 20rem;
+    /* padding-left: 20rem; */
   }
 
-  .barna2info img {
+  .barna2imgbox img {
     width: 50%;
-    padding-left: 20rem;
+  }
+}
+
+@media (max-width: 1125px) {
+  .barna2imgbox img {
+    width: 50%;
   }
 }
 
 @media (max-width: 992px) {
-  .barna2info {
+  .barna2 {
     background-image: url(../image/VIP-LP6-PC4.3.png);
   }
 
@@ -2525,13 +2552,33 @@ body {
     font-size: 2rem;
     line-height: 4.2rem;
     padding-bottom: 3rem;
-    padding-left: 15rem;
+    /* padding-left: 15rem; */
   }
+  .barna2imgbox img {
+    width: 55%;
+  }
+}
 
-  .barna2info img {
+@media (max-width: 875px) {
+  .barna2imgbox img {
+    width: 65%;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .barna2info h1 {
+    font-size: 1.8rem;
+    line-height: 4rem;
+    padding-bottom: 2rem;
+    padding-left: 15rem;
+
+  }
+  .barna2imgbox img {
     width: 50%;
     padding-left: 15rem;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -2539,12 +2586,25 @@ body {
     font-size: 1.8rem;
     line-height: 4rem;
     padding-bottom: 2rem;
-    padding-left: 10rem;
+    /* padding-left: 10rem; */
+
   }
 
-  .barna2info img {
-    width: 50%;
-    padding-left: 10rem;
+  .barna2imgbox img {
+    width: 55%;
+  }
+}
+
+@media (max-width: 660px) {
+  .barna2info h1 {
+
+    padding-left: 8rem;
+
+  }
+
+  .barna2imgbox img {
+    width: 55%;
+    padding-left: 8rem;
   }
 }
 
@@ -2553,13 +2613,11 @@ body {
     font-size: 1.4rem;
     line-height: 3rem;
     padding-bottom: 1rem;
-    padding-left: 8rem;
+    /* padding-left: 8rem; */
     letter-spacing: 0.8rem;
+
   }
-  .barna2info img {
-    width: 60%;
-    padding-left: 8rem;
-  }
+
 }
 
 @media (max-width: 450px) {
@@ -2567,6 +2625,16 @@ body {
     font-size: 1.2rem;
     line-height: 2.4rem;
     letter-spacing: 0.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .barna2info h1 {
+     padding-left: 5rem;
+  }
+  .barna2imgbox img {
+    
+    padding-left: 5rem;
   }
 }
 
@@ -3013,12 +3081,16 @@ body {
   min-height: 100vh;
 
   color: white;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 .infotext h1 {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
-  padding-top: 30rem;
+  /* padding-top: 30rem; */
   /* padding-left: 80rem; */
   font-size: 3.2rem;
   line-height: 8rem;
@@ -3044,7 +3116,7 @@ body {
     /* padding-left: 60rem; */
     font-size: 2.4rem;
     line-height: 6rem;
-    padding-top: 25rem;
+    /* padding-top: 25rem; */
 
     letter-spacing: 0.8rem;
 
@@ -3067,7 +3139,7 @@ body {
     /* padding-left: 50rem; */
     font-size: 2.2rem;
     line-height: 5.2rem;
-    padding-top: 20rem;
+    /* padding-top: 20rem; */
   }
 
   .infotext-logo {
@@ -3212,12 +3284,17 @@ body {
   min-height: 100vh;
 
   color: white;
+
+  display: flex;
+  flex-flow: column;
+
+  justify-content: center;
 }
 
 .infotext2 h1 {
   font-family: "Zen Old Mincho", serif;
   font-weight: 400;
-  padding-top: 30rem;
+  /* padding-top: 30rem; */
   /* padding-left: 40rem; */
   font-size: 3.2rem;
   line-height: 10rem;
@@ -3250,7 +3327,7 @@ body {
 
 @media (max-width: 1400px) {
   .infotext2 h1 {
-    padding-top: 25rem;
+    /* padding-top: 25rem; */
     /* padding-left: 30rem; */
   }
   .infotext2 h1 + p {
@@ -3269,7 +3346,7 @@ body {
 
 @media (max-width: 1200px) {
   .infotext2 h1 {
-    padding-top: 20rem;
+    /* padding-top: 20rem; */
     /* padding-left: 25rem; */
   }
   .infotext2 h1 + p {
@@ -3320,7 +3397,7 @@ body {
 
 @media (max-width: 768px) {
   .infotext2 h1 {
-    padding-top: 20rem;
+    /* padding-top: 20rem; */
 
     font-size: 2.2rem;
 
@@ -3568,12 +3645,21 @@ body {
   .morecv img {
     width: 60%;
   }
+
+  .cvtit1{
+    width: 80%;
+  }
+
+  .cvtext1{
+    width: 80%;
+  }
 }
 
 @media (max-width: 360px) {
   .ctit h1{
     font-size: 2rem;
   }
+  
 }
 /*-----------------------------------*\
   #qabox
