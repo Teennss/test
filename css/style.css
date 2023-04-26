@@ -74,6 +74,9 @@ body {
   max-width: 100%;
 
   -webkit-text-size-adjust: 100%;
+
+
+	--inv: #fff;
 }
 
 /*-----------------------------------*\
@@ -86,7 +89,20 @@ body {
   right: 5%;
   fill: white;
 
+  z-index: 800;
+}
 
+.topbut{
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+
+}
+
+.topbut.show{
+  display: block;
+  opacity: 1;
 }
 
 /*-----------------------------------*\
@@ -102,12 +118,12 @@ body {
 .yokobar {
   background-color: black;
 
-  display: none;
+  display: flex;
   width: 50%;
   height: 100vh;
 
   position: fixed;
-  left: 50%;
+  right: -60%;
 
   justify-content: center;
   align-items: center;
@@ -117,27 +133,71 @@ body {
   color: white;
 
   z-index: 1000;
+
+
+  box-shadow: -10px 0px 20px 0px rgba(0, 0, 0, 1);
+
+  transition: right 0.3s ease-in-out;
 }
+
 .nav-open{
   display: flex;
+
+  right: 0;
+
+}
+
+.yokobarlist{
+  display: flex;
+  flex-flow: column;
+  gap: 4rem;
+
+  justify-content: center;
+  align-self: center;
 }
 
 .yokobarbut svg {
 
-  position: fixed;
+  position: absolute;
   top: 2%;
   right: 2%;
   fill: white;
 
 }
 
-.yokobar li {
-
-  padding-bottom: 2.4rem;
-}
 
 }
 
+
+@media (max-width: 575px) {
+
+  .yokobar {
+
+    font-size: 1.4rem;
+
+  }
+
+  .yokobarlist{
+
+    gap: 3rem;
+
+  }
+}
+
+@media (max-width: 450px) {
+
+  .yokobar {
+
+    font-size: 1.2rem;
+
+  }
+
+  .yokobarlist{
+
+    gap: 2rem;
+
+  }
+}
 
 
 /*-----------------------------------*\
@@ -168,13 +228,73 @@ body {
   color: white;
   font-size: 1.4rem;
   font-weight: 700;
-  gap: 3rem;
+
 
   white-space: nowrap;
+
+  z-index: 2000;
 }
+
+.navbarbut{
+
+  position: relative;	
+
+  padding: 1.4rem 2.2rem;
+	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
+	cursor: pointer;
+	user-select: none;
+}
+
+.navbarbut:before, .navbarbut:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.navbarbut:hover {
+	color: black;
+	transition-delay: .5s;
+}
+
+.navbarbut:hover:before {
+	transition-delay: 0s;
+}
+
+.navbarbut:hover:after {
+	background-color: var(--inv);
+	transition-delay: .35s;
+}
+
+.from-top:before, 
+.from-top:after {
+  left: 0;
+	height: 0;
+	width: 100%;
+}
+
+.from-top:before {
+  bottom: 0;	
+	border: 1px solid var(--inv);
+	border-top: 0;
+	border-bottom: 0;
+}
+
+.from-top:after {
+	top: 0;
+	height: 0;
+}
+
+.from-top:hover:before,
+.from-top:hover:after {
+	height: 100%;
+}
+
+
 
 .navphonebut svg{
 
+  display: none;
   fill: white;
   position: relative;
   top: 2%;
@@ -243,12 +363,18 @@ body {
 }
 @media (max-width: 1200px) {
   .topbar {
-    margin: 0 6rem;
+    margin: 0 4rem;
   }
   .navbar {
     font-size: 1.2rem;
     gap: 2rem;
   }
+
+  .navbarbut{
+
+    padding: 1.4rem 1.8rem;
+  }
+
   .herologo {
     /* padding-left: 15rem;
     padding-bottom: 3rem; */
@@ -274,6 +400,17 @@ body {
     font-size: 1rem;
     gap: 2rem;
   }
+
+    .navbar {
+    font-size: 1.2rem;
+    gap: 2rem;
+  }
+
+  .navbarbut{
+
+    padding: 1.4rem 1.4rem;
+  }
+
   .herologo {
     /* padding-left: 10rem;
     padding-bottom: 3rem; */
@@ -332,6 +469,12 @@ body {
   .navphonebut {
     color: white;
   }
+
+  .navphonebut svg{
+
+    display: block;
+  
+  }
 }
 
 @media (max-width: 575px) {
@@ -374,6 +517,23 @@ body {
     width: 80%;
   }
 }
+
+@media (max-width: 385px) {
+
+  .logo img {
+    width: 65%;
+  }
+}
+
+
+@media (max-width: 400px) {
+  
+  .hero {
+    background-image: url(../image/VIP-LP1-PC9.16.png);
+  }
+
+}
+
 
 @media (max-width: 378px) {
   .herotext h1 {
@@ -747,6 +907,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .sec1div {
+    background-image: url(../image/VIP-LP2-PC9.16.png);
+  }
+
   .sec1t1 h1 {
     font-size: 1.2rem;
     line-height: 1.4rem;
@@ -1016,6 +1181,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .sec2div {
+    background-image: url(../image/VIP-LP3-PC9.16.png);
+  }
+
   .sec2t1 h1 {
     font-size: 1.2rem;
     width: 100%;
@@ -1322,6 +1492,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .sec3div {
+    background-image: url(../image/VIP-LP4-PC9.16.png);
+  }
+
   .sec3t3 h2 {
     font-size: 1.4rem;
   }
@@ -1408,6 +1583,8 @@ body {
   left: 20%;
 
   border-radius: 1rem;
+
+  z-index: 500;
 }
 
 .maininfo {
@@ -1472,8 +1649,8 @@ body {
   .pricecartbox {
     /* gap: 20rem; */
   }
-  .pricecartbox img {
-    width: 20%;
+  .priceimg {
+    width: 130px;
   }
   .maintop-right img {
     /* padding-bottom: 10rem; */
@@ -1567,8 +1744,8 @@ body {
     /* gap: 10rem; */
     padding-bottom: 5rem;
   }
-  .pricecartbox img {
-    width: 20%;
+  .priceimg {
+    width: 90px;
   }
 
   .maintop-right img {
@@ -1627,6 +1804,10 @@ body {
 
   .maininfo-right li {
     font-size: 1.2rem;
+  }
+
+  .priceimg {
+    width: 70px;
   }
 }
 
@@ -1874,6 +2055,14 @@ body {
   }
 }
 
+@media (max-width: 450px) {
+
+  .shoppingcard {
+    width: 280%;
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 400px) {
   .shoppingcard {
     width: 300%;
@@ -2012,11 +2201,6 @@ body {
   }
 }
 
-@media (max-width: 400px) {
-  .barnainfo2 {
-    width: 100%;
-  }
-}
 
 @media (max-width: 450px) {
   .barnainfo {
@@ -2027,6 +2211,18 @@ body {
     /* gap: 4rem; */
   }
 }
+
+@media (max-width: 400px) {
+
+  .barna {
+    background-image: url(../image/VIP-LP5-PC9.16.png);
+  }
+
+  .barnainfo2 {
+    width: 100%;
+  }
+}
+
 
 @media (max-width: 360px) {
 
@@ -2673,6 +2869,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .barna2 {
+    background-image: url(../image/VIP-LP6-PC9.16.png);
+  }
+
   .barna2info h1 {
      padding-left: 5rem;
   }
@@ -2809,6 +3010,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .ed {
+    background-image: url(../image/VIP-LP7-9.16.png);
+  }
+
   .edbar {
     margin: 0.8rem 0 0.6rem;
   }
@@ -3102,15 +3308,25 @@ body {
 @media (max-width: 385px) {
 
   .metit h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     letter-spacing: 0rem;
   }
 
   .metext h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     letter-spacing: 0rem;
   }
 }
+
+
+@media (max-width: 378px) {
+  .metit img{
+    width: 90%;
+  }
+
+}
+
+
 /*-----------------------------------*\
   #infotext
 \*-----------------------------------*/
@@ -3293,6 +3509,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .infotext-bg {
+    background-image: url(../image/VIP-LP8-9.16.png);
+  }
+
   .infotext h1 {
     font-size: 1.2rem;
     line-height: 3.2rem;
@@ -3498,6 +3719,11 @@ body {
 }
 
 @media (max-width: 400px) {
+
+  .infotext-bg2 {
+    background-image: url(../image/VIP-LP9-9.16.png);
+  }
+
   .infotext2 h1 {
     left: 10%;
   }
@@ -3524,18 +3750,36 @@ body {
   #fotbarna
 \*-----------------------------------*/
 
-.fbimg {
+.fbimg a{
   display: flex;
   justify-content: center;
   padding: 15rem 0;
 }
 
 @media (max-width: 1400px) {
-  .fbimg {
+  .fbimg a{
     padding: 10rem 0;
   }
-  .fbimg img {
+  .fbimg a img {
     width: 70%;
+  }
+}
+
+
+@media (max-width: 575px) {
+
+  .fbimg a {
+    padding: 5rem 0;
+  }
+
+  .fbimg a img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 400px) {
+  .fbimg a {
+    padding: 3rem 0;
   }
 }
 
@@ -3561,20 +3805,22 @@ body {
 
 .cvtextbox {
   display: grid;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .cvtit1 {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: center;
+
   width: 60%;
   margin: 0 auto;
   background-image: url(../image/購入カード.jpg);
   background-size: cover;
   padding: 3rem;
 
-  flex-flow: column;
 }
+
 
 .cvtit1 p {
   font-size: 1.8rem;
@@ -3584,19 +3830,40 @@ body {
   padding-bottom: 1rem;
 }
 
+.cvbut svg {
+  fill: white;
+}
+.cvbut:hover{
+  cursor: pointer;
+}
+
 .cvtext1 {
-  display: flex;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
   margin: 2rem auto;
   justify-content: left;
   width: 60%;
   background-color: #333;
 
-  padding: 3rem;
+  padding: 0;
 
   font-size: 1.6rem;
+
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+
+  
 }
 
-.morecv {
+.cvtextopen{
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  padding: 3rem;
+}
+
+.morecv a {
   display: flex;
   justify-content: center;
   margin: 5rem auto;
@@ -3665,28 +3932,28 @@ body {
     font-size: 1rem;
   }
 
-  .morecv img {
+  .morecv a img {
     width: 50%;
   }
 }
 
 @media (max-width: 575px) {
   .cvtit1 {
-    text-align: center;
+    /* text-align: center; */
     padding: 1rem;
   }
 
   .cvtext1 {
-    text-align: center;
+    /* text-align: center; */
   }
 
-  .morecv img {
+  .morecv a img {
     width: 55%;
   }
 }
 
 @media (max-width: 450px) {
-  .morecv img {
+  .morecv a img {
     width: 60%;
   }
 
@@ -3725,12 +3992,14 @@ body {
 
 .qatextbox {
   display: grid;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .qatit1 {
   display: flex;
-  justify-content: left;
+  justify-content: space-between;
+  align-items: center;
+
   width: 60%;
   margin: 0 auto;
   background-image: url(../image/購入カード.jpg);
@@ -3743,18 +4012,39 @@ body {
   font-size: 1.8rem;
 }
 
+.qabut svg {
+  fill: white;
+}
+
+.qabut:hover{
+  cursor: pointer;
+}
+
 .qatext1 {
-  display: flex;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
   margin: 2rem auto;
   justify-content: left;
   width: 60%;
   background-color: #333;
 
-  padding: 3rem;
+  padding: 0;
+
   font-size: 1.6rem;
+
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
-.moreqa {
+.qatextopen{
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+  padding: 3rem;
+}
+
+.moreqa a{
   display: flex;
   justify-content: center;
   margin: 5rem auto;
@@ -3815,31 +4105,40 @@ body {
     font-size: 1rem;
   }
 
-  .moreqa img {
+  .moreqa a img {
     width: 50%;
   }
 }
 
 @media (max-width: 575px) {
+  
   .qatit1 {
-    justify-content: center;
-    text-align: center;
+    /* justify-content: center; */
+    /* text-align: center; */
 
     padding: 1.4rem;
   }
 
   .qatext1 {
-    text-align: center;
+    /* text-align: center; */
   }
 
-  .moreqa img {
+  .moreqa a img {
     width: 55%;
   }
 }
 
 @media (max-width: 450px) {
-  .moreqa img {
+  .moreqa a img {
     width: 60%;
+  }
+
+  .qatext1 {
+    width: 80%;
+  }
+
+  .qatit1 {
+    width: 80%;
   }
 }
 @media (max-width: 360px) {
@@ -3853,6 +4152,7 @@ body {
 \*-----------------------------------*/
 
 .moreshopbar {
+
   width: 60%;
 
   background-image: url(../image/購入カード.jpg);
@@ -3863,6 +4163,11 @@ body {
   padding: 3rem;
 }
 
+.moreshopbar:hover {
+  cursor: pointer;
+}
+
+
 .moreshopbar h1 {
   font-family: "Zen Old Mincho", serif;
   letter-spacing: 1.2rem;
@@ -3872,12 +4177,37 @@ body {
 }
 
 .moreshopinfo {
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  transform: translateY(-10%); 
+
+  transition: all 0.5s ease-in-out;
+
   display: flex;
 
   width: 100%;
   flex-flow: column;
   justify-content: center;
   gap: 5rem;
+}
+
+.moreshopinfo-open  {
+
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+
+  padding: 1rem 0;
+
+  transform: translateY(0%);
+
+  overflow: visible;
 }
 
 .infoimg1 {
