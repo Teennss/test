@@ -10,7 +10,7 @@ btnNavcloseEl.addEventListener("click", function () {
     headerEl.classList.toggle("nav-open");
   });
 
-  const allLinks = document.querySelectorAll("a:link");
+  const allLinks = document.querySelectorAll(".nav-list-button");
 
   allLinks.forEach(function (link) {
     link.addEventListener("click", function (e) {
@@ -36,7 +36,6 @@ btnNavcloseEl.addEventListener("click", function () {
     });
   });
 
-  
 
 
   // topbut
