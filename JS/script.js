@@ -107,7 +107,8 @@ var fadeInsInfo = [];
 for (var i = 0; i < fadeIns.length; i++) {
   var fadeIn = fadeIns[i];
   var distanceFromTop = fadeIn.getBoundingClientRect().top;
-  fadeInsInfo.push({ element: fadeIn, distanceFromTop: distanceFromTop, delay: (i + 1) * 100 });
+  var delay = distanceFromTop * 0.1; 
+  fadeInsInfo.push({ element: fadeIn, distanceFromTop: distanceFromTop, delay: delay });
 }
 
 window.addEventListener('scroll', function() {

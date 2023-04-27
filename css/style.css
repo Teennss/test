@@ -368,14 +368,10 @@ body {
   .topbar {
     margin: 0 4rem;
   }
-  .navbar {
-    font-size: 1rem;
-    gap: 2rem;
-  }
 
   .navbar {
     font-size: 1.2rem;
-    gap: 2rem;
+    gap: 0rem;
   }
 
   .navbarbut {
@@ -401,7 +397,11 @@ body {
 
   .navbar {
     font-size: 1rem;
-    gap: 1rem;
+
+  }
+
+  .navbarbut {
+    padding: 1rem 1rem
   }
 }
 
