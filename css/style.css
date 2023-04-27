@@ -25,7 +25,6 @@ ion-icon {
 a {
   color: inherit;
   text-decoration: none;
-
 }
 
 img {
@@ -55,8 +54,6 @@ ion-icon {
   pointer-events: none;
 }
 
-
-
 html {
   font-size: 62.5%;
 
@@ -76,15 +73,14 @@ body {
 
   -webkit-text-size-adjust: 100%;
 
-
-	--inv: #fff;
+  --inv: #fff;
 }
 
 /*-----------------------------------*\
   #topbut
 \*-----------------------------------*/
 
-.topbut svg{
+.topbut svg {
   position: fixed;
   bottom: 5%;
   right: 5%;
@@ -93,15 +89,13 @@ body {
   z-index: 800;
 }
 
-.topbut{
+.topbut {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-
-
 }
 
-.topbut.show{
+.topbut.show {
   display: block;
   opacity: 1;
 }
@@ -110,96 +104,77 @@ body {
   #yokobar
 \*-----------------------------------*/
 
-.yokobar{
+.yokobar {
   display: none;
 }
 
 @media (max-width: 768px) {
-
-.yokobar {
-  background-color: black;
-
-  display: flex;
-  width: 50%;
-  height: 100vh;
-
-  position: fixed;
-  right: -60%;
-
-  justify-content: center;
-  align-items: center;
-
-  font-size: 1.6rem;
-
-  color: white;
-
-  z-index: 1000;
-
-
-  box-shadow: -10px 0px 20px 0px rgba(0, 0, 0, 1);
-
-  transition: right 0.3s ease-in-out;
-}
-
-.nav-open{
-  display: flex;
-
-  right: 0;
-
-}
-
-.yokobarlist{
-  display: flex;
-  flex-flow: column;
-  gap: 4rem;
-
-  justify-content: center;
-  align-self: center;
-}
-
-.yokobarbut svg {
-
-  position: absolute;
-  top: 2%;
-  right: 2%;
-  fill: white;
-
-}
-
-
-}
-
-
-@media (max-width: 575px) {
-
   .yokobar {
+    background-color: black;
 
-    font-size: 1.4rem;
+    display: flex;
+    width: 50%;
+    height: 100vh;
 
+    position: fixed;
+    right: -60%;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.6rem;
+
+    color: white;
+
+    z-index: 1000;
+
+    box-shadow: -10px 0px 20px 0px rgba(0, 0, 0, 1);
+
+    transition: right 0.3s ease-in-out;
   }
 
-  .yokobarlist{
+  .nav-open {
+    display: flex;
 
+    right: 0;
+  }
+
+  .yokobarlist {
+    display: flex;
+    flex-flow: column;
+    gap: 4rem;
+
+    justify-content: center;
+    align-self: center;
+  }
+
+  .yokobarbut svg {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    fill: white;
+  }
+}
+
+@media (max-width: 575px) {
+  .yokobar {
+    font-size: 1.4rem;
+  }
+
+  .yokobarlist {
     gap: 3rem;
-
   }
 }
 
 @media (max-width: 450px) {
-
   .yokobar {
-
     font-size: 1.2rem;
-
   }
 
-  .yokobarlist{
-
+  .yokobarlist {
     gap: 2rem;
-
   }
 }
-
 
 /*-----------------------------------*\
   #header
@@ -230,77 +205,72 @@ body {
   font-size: 1.4rem;
   font-weight: 700;
 
-
   white-space: nowrap;
 
   z-index: 2000;
 }
 
-.navbarbut{
-
-  position: relative;	
+.navbarbut {
+  position: relative;
 
   padding: 1.4rem 2.2rem;
-	transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);	
-	cursor: pointer;
-	user-select: none;
+  transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+  user-select: none;
 }
 
-.navbarbut:before, .navbarbut:after {
-	content: '';
-	position: absolute;	
-	transition: inherit;
-	z-index: -1;
+.navbarbut:before,
+.navbarbut:after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
 }
 
 .navbarbut:hover {
-	color: black;
-	transition-delay: .5s;
+  color: black;
+  transition-delay: 0.5s;
 }
 
 .navbarbut:hover:before {
-	transition-delay: 0s;
+  transition-delay: 0s;
 }
 
 .navbarbut:hover:after {
-	background-color: var(--inv);
-	transition-delay: .35s;
+  background-color: var(--inv);
+  transition-delay: 0.35s;
 }
 
-.from-top:before, 
+.from-top:before,
 .from-top:after {
   left: 0;
-	height: 0;
-	width: 100%;
+  height: 0;
+  width: 100%;
 }
 
 .from-top:before {
-  bottom: 0;	
-	border: 1px solid var(--inv);
-	border-top: 0;
-	border-bottom: 0;
+  bottom: 0;
+  border: 1px solid var(--inv);
+  border-top: 0;
+  border-bottom: 0;
 }
 
 .from-top:after {
-	top: 0;
-	height: 0;
+  top: 0;
+  height: 0;
 }
 
 .from-top:hover:before,
 .from-top:hover:after {
-	height: 100%;
+  height: 100%;
 }
 
-
-
-.navphonebut svg{
-
+.navphonebut svg {
   display: none;
   fill: white;
   position: relative;
   top: 2%;
   right: 2%;
-
 }
 
 .hero {
@@ -313,6 +283,8 @@ body {
 
   display: flex;
   align-items: center;
+
+  border-top: 1px solid yellow;
 }
 
 .herologo {
@@ -371,8 +343,7 @@ body {
     gap: 2rem;
   }
 
-  .navbarbut{
-
+  .navbarbut {
     padding: 1.4rem 1.8rem;
   }
 
@@ -402,13 +373,12 @@ body {
     gap: 2rem;
   }
 
-    .navbar {
+  .navbar {
     font-size: 1.2rem;
     gap: 2rem;
   }
 
-  .navbarbut{
-
+  .navbarbut {
     padding: 1.4rem 1.4rem;
   }
 
@@ -471,10 +441,8 @@ body {
     color: white;
   }
 
-  .navphonebut svg{
-
+  .navphonebut svg {
     display: block;
-  
   }
 }
 
@@ -520,21 +488,16 @@ body {
 }
 
 @media (max-width: 385px) {
-
   .logo img {
     width: 65%;
   }
 }
 
-
 @media (max-width: 400px) {
-  
   .hero {
     background-image: url(../image/VIP-LP1-PC9.16.png);
   }
-
 }
-
 
 @media (max-width: 378px) {
   .herotext h1 {
@@ -546,10 +509,22 @@ body {
 
 @media (max-width: 360px) {
   .herotext h1 {
-
     letter-spacing: 0.2rem;
   }
 }
+
+/*-----------------------------------*\
+  #inout anime
+\*-----------------------------------*/
+
+.inout{
+  opacity: 0;
+  transition: opacity 1s linear;
+}
+
+
+
+
 /*-----------------------------------*\
   #section1
 \*-----------------------------------*/
@@ -565,6 +540,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 
 .sec1text {
@@ -908,7 +884,6 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .sec1div {
     background-image: url(../image/VIP-LP2-PC9.16.png);
   }
@@ -1182,7 +1157,6 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .sec2div {
     background-image: url(../image/VIP-LP3-PC9.16.png);
   }
@@ -1201,7 +1175,7 @@ body {
 @media (max-width: 360px) {
   .sec2t1 h1 {
     font-size: 1rem;
-    line-height :2rem;
+    line-height: 2rem;
   }
 
   .sec2t2 p {
@@ -1493,7 +1467,6 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .sec3div {
     background-image: url(../image/VIP-LP4-PC9.16.png);
   }
@@ -1504,17 +1477,17 @@ body {
 }
 
 @media (max-width: 360px) {
-  .sec3t1 h1{
+  .sec3t1 h1 {
     font-size: 1.2rem;
     letter-spacing: 0.2rem;
   }
 
-  .sec3t2 p{
+  .sec3t2 p {
     font-size: 1.2rem;
     right: 70%;
   }
 
-  .sec3t3 h2{
+  .sec3t3 h2 {
     font-size: 1.2rem;
   }
 }
@@ -1627,13 +1600,59 @@ body {
 }
 
 .yltext {
-  color: yellow;
+  /* color: yellow; */
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+  
 }
 .ylbar {
   width: 100%;
   height: 2px;
-  background-color: yellow;
-  margin: 2rem 0 1rem;
+  /* background-color: yellow; */
+  margin: 1.5rem 0 1rem;
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+}
+
+
+.priceimg {
+  opacity: 1;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.priceimg:hover {
+  opacity: 0.4;
 }
 @media (max-width: 1400px) {
   .maintop {
@@ -1874,7 +1893,7 @@ body {
     font-size: 2.6rem;
   }
 
-  .maintop{
+  .maintop {
     margin: 0 3rem;
   }
 }
@@ -1932,6 +1951,16 @@ body {
 
   width: 50%;
   border-radius: 2rem;
+
+  box-shadow: 0;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.shopcard:hover {
+  box-shadow: inset 0 0 20px 10px black;
+
+  /* cursor: pointer; */
 }
 
 .cardinfo ul li {
@@ -1981,8 +2010,6 @@ body {
   .shopxbox {
     overflow-x: auto;
     scroll-snap-type: none;
-    
-
   }
 
   .shoppingcard {
@@ -2000,7 +2027,6 @@ body {
   .shopxbox {
     overflow-x: auto;
     scroll-snap-type: none;
-
   }
 
   .shoppingcard {
@@ -2057,7 +2083,6 @@ body {
 }
 
 @media (max-width: 450px) {
-
   .shoppingcard {
     width: 280%;
     gap: 2rem;
@@ -2096,7 +2121,6 @@ body {
 }
 
 .barnainfo {
-
   display: flex;
   /* justify-content: space-between; */
   align-items: center;
@@ -2109,8 +2133,6 @@ body {
   font-family: "Zen Old Mincho", serif;
 
   /* border: 2px solid red; */
-
-  
 }
 
 .barnainfo1 p {
@@ -2119,10 +2141,9 @@ body {
   -epub-writing-mode: vertical-rl;
 
   /* border: 2px solid yellow; */
-
 }
 
-.barnainfo2{
+.barnainfo2 {
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -2136,14 +2157,32 @@ body {
   -epub-writing-mode: vertical-rl;
 
   /* padding: 0 20rem; */
-  
 
   /* border: 2px solid yellow; */
-
 }
 
-.barnainfo2 p:nth-child(2){
-  color: yellow;
+.barnainfo2 p:nth-child(2) {
+  background: linear-gradient(
+    to bottom,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .barnainfo3 p {
@@ -2152,10 +2191,7 @@ body {
   -epub-writing-mode: vertical-rl;
 
   /* border: 2px solid yellow; */
-
 }
-
-
 
 @media (max-width: 1400px) {
   .barnainfo {
@@ -2202,7 +2238,6 @@ body {
   }
 }
 
-
 @media (max-width: 450px) {
   .barnainfo {
     font-size: 1.4rem;
@@ -2214,7 +2249,6 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .barna {
     background-image: url(../image/VIP-LP5-PC9.16.png);
   }
@@ -2224,10 +2258,8 @@ body {
   }
 }
 
-
 @media (max-width: 360px) {
-
-  .barnainfo{
+  .barnainfo {
     font-size: 1.2rem;
   }
 }
@@ -2244,7 +2276,29 @@ body {
 .infotit h1 {
   font-size: 5.2rem;
   padding-bottom: 3rem;
-  color: yellow;
+  /* color: yellow; */
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .infotit p {
@@ -2296,7 +2350,29 @@ body {
   font-size: 3rem;
   letter-spacing: 1.2rem;
   padding-bottom: 3rem;
-  color: yellow;
+  /* color: yellow; */
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .infomainbox p {
@@ -2506,8 +2582,6 @@ body {
   .infomainbox p {
     font-size: 1rem;
   }
-
-
 }
 
 @media (max-width: 360px) {
@@ -2544,7 +2618,28 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-size: 2.8rem;
   padding-bottom: 8rem;
-  color: yellow;
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .hilist {
@@ -2676,7 +2771,7 @@ body {
     gap: 2rem;
   }
 
-    .hilistleft img {
+  .hilistleft img {
     width: 120px;
   }
 
@@ -2704,12 +2799,11 @@ body {
   .hilistleft img {
     width: 100px;
   }
-  
+
   .hilistleft {
     gap: 2rem;
   }
 }
-
 
 /*-----------------------------------*\
   #barna2
@@ -2741,8 +2835,6 @@ body {
 
   /* position: relative;
   left: 30%; */
-
-
 }
 
 .barna2imgbox img {
@@ -2807,19 +2899,16 @@ body {
 }
 
 @media (max-width: 850px) {
-
   .barna2info h1 {
     font-size: 1.8rem;
     line-height: 4rem;
     padding-bottom: 2rem;
     padding-left: 15rem;
-
   }
   .barna2imgbox img {
     width: 50%;
     padding-left: 15rem;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -2828,7 +2917,6 @@ body {
     line-height: 4rem;
     padding-bottom: 2rem;
     /* padding-left: 10rem; */
-
   }
 
   .barna2imgbox img {
@@ -2838,9 +2926,7 @@ body {
 
 @media (max-width: 660px) {
   .barna2info h1 {
-
     padding-left: 8rem;
-
   }
 
   .barna2imgbox img {
@@ -2856,9 +2942,7 @@ body {
     padding-bottom: 1rem;
     /* padding-left: 8rem; */
     letter-spacing: 0.8rem;
-
   }
-
 }
 
 @media (max-width: 450px) {
@@ -2870,16 +2954,14 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .barna2 {
     background-image: url(../image/VIP-LP6-PC9.16.png);
   }
 
   .barna2info h1 {
-     padding-left: 5rem;
+    padding-left: 5rem;
   }
   .barna2imgbox img {
-    
     padding-left: 5rem;
   }
 }
@@ -2907,8 +2989,21 @@ body {
 .edbar {
   width: 100%;
   height: 2px;
-  background-color: yellow;
+  /* background-color: yellow; */
   margin: 1.5rem 0 1rem;
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
 }
 
 .edtext {
@@ -2928,7 +3023,29 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-size: 2.4rem;
   letter-spacing: 1rem;
-  color: yellow;
+  /* color: yellow; */
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .edtext li {
@@ -3011,7 +3128,6 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .ed {
     background-image: url(../image/VIP-LP7-9.16.png);
   }
@@ -3052,8 +3168,30 @@ body {
   font-family: "Zen Old Mincho", serif;
   letter-spacing: 1.2rem;
   font-weight: 400;
-  color: yellow;
+  /* color: yellow; */
   font-size: 4rem;
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .metibox {
@@ -3307,7 +3445,6 @@ body {
 }
 
 @media (max-width: 385px) {
-
   .metit h1 {
     font-size: 1.8rem;
     letter-spacing: 0rem;
@@ -3319,14 +3456,11 @@ body {
   }
 }
 
-
 @media (max-width: 378px) {
-  .metit img{
+  .metit img {
     width: 90%;
   }
-
 }
-
 
 /*-----------------------------------*\
   #infotext
@@ -3503,14 +3637,12 @@ body {
 }
 
 @media (max-width: 450px) {
-
   .infotext-logo img {
     width: 40%;
   }
 }
 
 @media (max-width: 400px) {
-
   .infotext-bg {
     background-image: url(../image/VIP-LP8-9.16.png);
   }
@@ -3565,7 +3697,29 @@ body {
   font-size: 3.2rem;
   line-height: 10rem;
   letter-spacing: 1rem;
-  color: yellow;
+  /* color: yellow; */
+
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 
   position: relative;
   left: 25%;
@@ -3697,7 +3851,7 @@ body {
     font-size: 1.8rem;
     letter-spacing: 0.4rem;
   }
-  .infotext2 h1 + p{
+  .infotext2 h1 + p {
     letter-spacing: 0.6rem;
   }
   .infotext2 p {
@@ -3720,7 +3874,6 @@ body {
 }
 
 @media (max-width: 400px) {
-
   .infotext-bg2 {
     background-image: url(../image/VIP-LP9-9.16.png);
   }
@@ -3736,13 +3889,10 @@ body {
 
 @media (max-width: 360px) {
   .infotext2 h1 {
-
     letter-spacing: 0.2rem;
-
   }
 
   .infotext2 h1 + p {
-
     letter-spacing: 0.2rem;
   }
 }
@@ -3751,14 +3901,24 @@ body {
   #fotbarna
 \*-----------------------------------*/
 
-.fbimg a{
+.fbimg a {
   display: flex;
   justify-content: center;
   padding: 15rem 0;
 }
 
+.fbimg a img {
+  opacity: 1;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fbimg a img:hover {
+  opacity: 0.4;
+}
+
 @media (max-width: 1400px) {
-  .fbimg a{
+  .fbimg a {
     padding: 10rem 0;
   }
   .fbimg a img {
@@ -3766,9 +3926,7 @@ body {
   }
 }
 
-
 @media (max-width: 575px) {
-
   .fbimg a {
     padding: 5rem 0;
   }
@@ -3819,9 +3977,7 @@ body {
   background-image: url(../image/購入カード.jpg);
   background-size: cover;
   padding: 3rem;
-
 }
-
 
 .cvtit1 p {
   font-size: 1.8rem;
@@ -3834,8 +3990,19 @@ body {
 .cvbut svg {
   fill: white;
 }
-.cvbut:hover{
+
+.cvbut {
+  rotate: 0;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.cvbut:hover {
   cursor: pointer;
+}
+
+.cvbut-acitve {
+  rotate: 45deg;
 }
 
 .cvtext1 {
@@ -3847,20 +4014,19 @@ body {
   width: 60%;
   background-color: #333;
 
-  padding: 0;
 
   font-size: 1.6rem;
 
   opacity: 0;
   transition: all 0.5s ease-in-out;
-
-  
 }
 
-.cvtextopen{
+.cvtextopen {
   visibility: visible;
   height: auto;
   opacity: 1;
+  overflow: visible;
+ 
   padding: 3rem;
 }
 
@@ -3868,6 +4034,16 @@ body {
   display: flex;
   justify-content: center;
   margin: 5rem auto;
+}
+
+.morecv a img {
+  opacity: 1;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.morecv a img:hover {
+  opacity: 0.4;
 }
 
 @media (max-width: 1400px) {
@@ -3958,20 +4134,19 @@ body {
     width: 60%;
   }
 
-  .cvtit1{
+  .cvtit1 {
     width: 80%;
   }
 
-  .cvtext1{
+  .cvtext1 {
     width: 80%;
   }
 }
 
 @media (max-width: 360px) {
-  .ctit h1{
+  .ctit h1 {
     font-size: 2rem;
   }
-  
 }
 /*-----------------------------------*\
   #qabox
@@ -4017,8 +4192,17 @@ body {
   fill: white;
 }
 
-.qabut:hover{
+.qabut {
+  rotate: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.qabut:hover {
   cursor: pointer;
+}
+
+.qabut-acitve {
+  rotate: 45deg;
 }
 
 .qatext1 {
@@ -4038,17 +4222,27 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-.qatextopen{
+.qatextopen {
   visibility: visible;
   height: auto;
   opacity: 1;
   padding: 3rem;
 }
 
-.moreqa a{
+.moreqa a {
   display: flex;
   justify-content: center;
   margin: 5rem auto;
+}
+
+.moreqa a img {
+  opacity: 1;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.moreqa a img:hover {
+  opacity: 0.4;
 }
 
 @media (max-width: 1400px) {
@@ -4112,7 +4306,6 @@ body {
 }
 
 @media (max-width: 575px) {
-  
   .qatit1 {
     /* justify-content: center; */
     /* text-align: center; */
@@ -4143,9 +4336,9 @@ body {
   }
 }
 @media (max-width: 360px) {
-.qatit h1{
-  font-size: 2rem;
-}
+  .qatit h1 {
+    font-size: 2rem;
+  }
 }
 
 /*-----------------------------------*\
@@ -4153,7 +4346,6 @@ body {
 \*-----------------------------------*/
 
 .moreshopbar {
-
   width: 60%;
 
   background-image: url(../image/購入カード.jpg);
@@ -4162,12 +4354,17 @@ body {
   margin: 5rem auto;
 
   padding: 3rem;
+
+  opacity: 1;
+
+  transition: all 0.3s ease-in-out;
 }
 
 .moreshopbar:hover {
   cursor: pointer;
-}
 
+  opacity: 0.4;
+}
 
 .moreshopbar h1 {
   font-family: "Zen Old Mincho", serif;
@@ -4178,37 +4375,28 @@ body {
 }
 
 .moreshopinfo {
-  visibility: hidden;
+  display: flex;
+
   opacity: 0;
+  visibility: hidden;
   height: 0;
-
-  overflow: hidden;
-
-  padding: 0;
-
-  transform: translateY(-10%); 
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
   transition: all 0.5s ease-in-out;
-
-  display: flex;
 
   width: 100%;
   flex-flow: column;
   justify-content: center;
   gap: 5rem;
+
+  cursor: pointer;
 }
 
-.moreshopinfo-open  {
-
-  visibility: visible;
-  height: auto;
+.moreshopinfo-open {
   opacity: 1;
-
-  padding: 1rem 0;
-
-  transform: translateY(0%);
-
-  overflow: visible;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  height: 100%;
+  visibility: visible;
 }
 
 .infoimg1 {
@@ -4333,7 +4521,7 @@ body {
 }
 
 @media (max-width: 360px) {
-  .moreshopbar h1{
+  .moreshopbar h1 {
     font-size: 1.4rem;
   }
 }
@@ -4484,9 +4672,9 @@ body {
 }
 
 @media (max-width: 575px) {
-.fottit h1 {
-  font-size: 2rem;
-}
+  .fottit h1 {
+    font-size: 2rem;
+  }
 }
 /*-----------------------------------*\
   #fotinfo
