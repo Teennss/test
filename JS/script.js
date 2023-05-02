@@ -121,7 +121,7 @@ var fadeInsInfo = [];
 for (var i = 0; i < fadeIns.length; i++) {
   var fadeIn = fadeIns[i];
   var distanceFromTop = fadeIn.getBoundingClientRect().top;
-  var delay = distanceFromTop * 0.1; 
+  var delay = distanceFromTop * 0.05; 
   fadeInsInfo.push({ element: fadeIn, distanceFromTop: distanceFromTop, delay: delay });
 }
 

@@ -2388,14 +2388,39 @@ span {
   box-shadow: 0;
 
   transition: all 0.4s ease-in-out;
+
+  overflow: hidden;
+
+  position: relative;
 }
+
+
+.shopcard5::after {
+  display: inline-block !important;
+  content: "2X お得";
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #222;
+  background-color: #fff23b;
+  padding: 0.8rem 10rem;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 7%;
+  right: -25%;
+
+}
+
 
 .shopcard:hover {
   box-shadow: inset 0 0 20px 5px black;
 
   transform: translateY(-20px);
-  /* cursor: pointer; */
+
 }
+
+
+
 
 .cardinfo ul li {
   text-align: center;
@@ -2497,7 +2522,8 @@ span {
 }
 
 .shopcart:hover {
-  background: #ffe593;
+
+  /* background: #ffe593; */
 
 }
 
@@ -4704,7 +4730,7 @@ span {
 .morecv a {
   display: flex;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 0rem auto 5rem;
 }
 
 .morecv a img {
@@ -4910,7 +4936,7 @@ span {
 .moreqa a {
   display: flex;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 0rem auto 5rem;
 }
 
 .moreqa a img {
