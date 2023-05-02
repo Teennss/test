@@ -4437,7 +4437,19 @@ span {
   .infotext-bg2 span {
     font-size: 3.2rem;
   }
+  
 }
+
+@media (max-width: 515px){
+  .infotext2 h1{
+    left: 12%;
+  }
+
+  .infotext2  p {
+    left: 12%;
+  }
+}
+
 
 @media (max-width: 450px) {
   .infotext-bg2{
@@ -4478,7 +4490,7 @@ span {
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 385px) { 
   .infotext2 h1 {
     letter-spacing: 0.15rem;
   }
@@ -4491,6 +4503,7 @@ span {
     font-size: 2.2rem;
   }
 }
+
 
 /*-----------------------------------*\
   #fotbarna
