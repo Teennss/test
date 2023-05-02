@@ -3106,10 +3106,8 @@ span {
   padding-bottom: 20rem;
 
   background-image: url(../image/bg1.png);
-
+  background-size: cover;
   background-position: top;
-
-
 }
 
 .honeypackage {
@@ -4598,7 +4596,7 @@ span {
 
 .cvtextbox {
   display: grid;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .cvtit1 {
@@ -4648,9 +4646,9 @@ span {
   width: 60%;
   background-color: #333;
 
-
+  padding: 3rem;
   font-size: 1.6rem;
-
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   opacity: 0;
   transition: all 0.5s ease-in-out;
 }
@@ -4660,8 +4658,8 @@ span {
   height: auto;
   opacity: 1;
   overflow: visible;
- 
-  padding: 3rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  
 }
 
 .morecv a {
@@ -4806,7 +4804,7 @@ span {
 
 .qatextbox {
   display: grid;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .qatit1 {
@@ -4852,9 +4850,11 @@ span {
   width: 60%;
   background-color: #333;
 
-  padding: 0;
+  padding: 2rem;
 
   font-size: 1.6rem;
+
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 
   opacity: 0;
   transition: all 0.5s ease-in-out;
@@ -4863,8 +4863,9 @@ span {
 .qatextopen {
   visibility: visible;
   height: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   opacity: 1;
-  padding: 3rem;
+  
 }
 
 .moreqa a {
