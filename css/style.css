@@ -665,8 +665,7 @@ span {
   display: none;
   justify-content: center;
 
-  position: relative;
-  left: 1%;
+
 }
 
 .padline img {
@@ -2368,6 +2367,7 @@ span {
   color: white;
   transition: color 0.25s 0.0833333333s;
   position: relative;
+
 }
 .draw-border::before, .draw-border::after {
   border: 0 solid transparent;
@@ -2389,7 +2389,7 @@ span {
   border-right-width: 4px;
 }
 .draw-border:hover {
-  color: #e5cfb7;
+  /* color: #e5cfb7; */
 }
 .draw-border:hover::before, .draw-border:hover::after {
   border-color: #ecb372;
@@ -2409,18 +2409,31 @@ span {
   border: none;
   cursor: pointer;
   line-height: 1.5;
-  font: 700 1.2rem ;
-  padding: 1.2rem 3rem;
+
+  font-size: 1.2rem;
+  font-weight: 900;
+  font-family:"source-han-sans-japanese", sans-serif;
+  padding: 1.2rem 0;
 
   font-size: 1.6rem;
   color: white;
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
 
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.2rem;
+
+  /* white-space: nowrap; */
+
+
+  transition: all 0.25s ease-in-out;
 }
 .shopcart:focus {
   outline: 2px dotted #ffe593;
+}
+
+.shopcart:hover {
+  background: #ffe593;
+
 }
 
 
@@ -2508,7 +2521,7 @@ span {
   }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 676px) {
   .shoppingcard {
     width: 180%;
     gap: 2rem;
@@ -2554,7 +2567,7 @@ span {
 
 @media (max-width: 360px) {
   .shoppingcard {
-    width: 350%;
+    width: 380%;
     gap: 2rem;
   }
 }
@@ -3042,9 +3055,7 @@ span {
     letter-spacing: 0rem;
   }
 
-  .infomainbox p {
-    font-size: 1rem;
-  }
+
 }
 
 @media (max-width: 360px) {
@@ -3628,6 +3639,10 @@ span {
     width: 90%;
     margin: 0 auto;
   }
+
+  .ed {
+    min-height: 85vh;
+   }
 }
 
 @media (max-width: 400px) {
@@ -3645,7 +3660,7 @@ span {
 
 @media (max-width: 360px) {
   .ed {
-   min-height: 85vh;
+   min-height: 100vh;
   }
 
 
