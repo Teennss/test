@@ -50,6 +50,20 @@ window.addEventListener("scroll", function () {
   }
 });
 
+// swipanime hidden
+
+var swipbox = document.getElementById("swipbox");
+
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 50) {
+        swipbox.classList.add("hidden");
+    } else {
+        swipbox.classList.remove("hidden");
+    }
+});
+
+
+
 // scrollbar
 
 window.onload = function () {

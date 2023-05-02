@@ -335,6 +335,14 @@ span {
   left: 50%;
 
   transform: translateX(-50%);
+
+  opacity: 1;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.swipbox.hidden {
+  opacity: 0;
 }
 
 .swipicon {
