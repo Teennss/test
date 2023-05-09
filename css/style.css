@@ -86,12 +86,10 @@ span {
   #topbut
 \*-----------------------------------*/
 
-.topbut svg {
+.topbut img {
   position: fixed;
   bottom: 5%;
   right: 5%;
-  fill: white;
-
   z-index: 800;
 }
 
@@ -154,11 +152,11 @@ span {
     align-self: center;
   }
 
-  .yokobarbut svg {
+  .yokobarbut img {
     position: absolute;
-    top: 2%;
-    right: 2%;
-    fill: white;
+    top: 1%;
+    left: 80%;
+    width: 10%;
   }
 }
 
@@ -194,9 +192,12 @@ span {
   background-color: black;
   height: 5rem;
 }
-
+.logo a {
+  cursor: default;
+}
 .logo img {
   width: 50%;
+  cursor: pointer;
 }
 
 .nav {
@@ -214,6 +215,8 @@ span {
   white-space: nowrap;
 
   z-index: 2000;
+
+  letter-spacing: 0.4rem;
 }
 
 .navbarbut {
@@ -271,12 +274,12 @@ span {
   height: 100%;
 }
 
-.navphonebut svg {
+.navphonebut img {
   display: none;
-  fill: white;
+  width: 15%;
   position: relative;
-  top: 2%;
-  right: 2%;
+  
+  left: 85%;
 }
 
 .hero {
@@ -476,7 +479,7 @@ span {
   }
 
   .logo img {
-    width: 40%;
+    width: 55%;
   }
 
   .navbar {
@@ -490,7 +493,7 @@ span {
     color: white;
   }
 
-  .navphonebut svg {
+  .navphonebut img {
     display: block;
   }
 }
@@ -512,6 +515,14 @@ span {
     letter-spacing: 0.6rem;
     left: 10%;
   }
+
+  .navphonebut img {
+    width: 18%;
+  }
+
+  .logo img {
+    width: 65%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -525,7 +536,7 @@ span {
   }
 
   .logo img {
-    width: 55%;
+    width: 75%;
   }
 
   .herologo {
@@ -539,17 +550,32 @@ span {
   .herotext h1 {
     width: 80%;
   }
-}
 
-@media (max-width: 385px) {
-  .logo img {
-    width: 65%;
+  .navphonebut img {
+    width: 20%;
   }
 }
+
+
 
 @media (max-width: 400px) {
   .hero {
     background-image: url(../image/VIP-LP1-PC9.16.png);
+  }
+  .navphonebut img {
+    width: 25%;
+  }
+}
+@media (max-width: 385px) {
+  .topbar{
+    margin: 0 2rem;
+  }
+  .logo img {
+    width: 90%;
+  }
+
+  .navphonebut img {
+    left: 75%;
   }
 }
 
@@ -630,7 +656,7 @@ span {
 
   position: relative;
 
-  left: 5%;
+  left: 8%;
 }
 
 .sec1t1 h1 span{
@@ -647,7 +673,7 @@ span {
 
   position: relative;
 
-  left: 15%;
+  left: 0%;
 }
 
 .sec1t3 h2 {
@@ -1187,7 +1213,7 @@ span {
   transform: rotate(-4deg);
 
   position: relative;
-  left: 7%;
+  left: 10%;
   top: 5%;
   padding-top: 3rem;
 }
@@ -1206,7 +1232,7 @@ span {
   text-align: right;
 
   position: relative;
-  right: 6%;
+  right: 12%;
 
   padding-top: 5rem;
 }
@@ -1222,11 +1248,20 @@ span {
   line-height: 5rem;
   letter-spacing: 1rem;
   transform: rotate(-4deg);
-  padding-top: 3rem;
   padding-bottom: 8rem;
 
   position: relative;
-  left: 18%;
+  left: 35%;
+}
+
+.sec2t3 h2 span{
+  position: relative;
+  left: -12%;
+}
+
+.sec2t3 h2 span:nth-child(4){
+  position: relative;
+  left: -20%;
 }
 
 @media (max-width: 1400px) {
@@ -1244,7 +1279,6 @@ span {
   .sec2t3 h2 {
     font-size: 2.6rem;
     line-height: 4rem;
-    padding-top: 4rem;
     padding-bottom: 10rem;
   }
 }
@@ -1264,7 +1298,7 @@ span {
   .sec2t3 h2 {
     font-size: 2.2rem;
     line-height: 4rem;
-    padding-top: 4rem;
+
   }
 }
 
@@ -1302,9 +1336,8 @@ span {
   .sec2t3 h2 {
     font-size: 2rem;
     line-height: 4rem;
-    padding-top: 4rem;
     padding-bottom: 6rem;
-    left: 12%;
+    left: 32%;
   }
 }
 
@@ -1337,9 +1370,8 @@ span {
   .sec2t3 h2 {
     font-size: 1.8rem;
     line-height: 3rem;
-    padding-top: 2rem;
 
-    left: 8%;
+    left: 30%;
 
     letter-spacing: 0.6rem;
 
@@ -1356,7 +1388,7 @@ span {
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: 0.5rem;
-    left: 8%;
+    left: 28%;
   }
 }
 
@@ -1396,7 +1428,7 @@ span {
     font-size: 1.6rem;
     line-height: 3rem;
     letter-spacing: 0.2rem;
-    left: 8%;
+    left: 32%;
   }
 }
 
@@ -1407,6 +1439,12 @@ span {
 
   .sec2t2 p span {
     font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec2t3 h2 {
+    left: 29%;
   }
 }
 
@@ -1470,6 +1508,7 @@ span {
   .sec2t3 h2 {
     font-size: 1.1rem;
     letter-spacing: 0rem;
+    line-height: 2rem;
   }
 
   .sec2t1 h1 span {
@@ -1550,7 +1589,7 @@ span {
   text-align: right;
 
   position: relative;
-  right: 5%;
+  right: 12%;
 }
 
 .sec3t3 h2 {
@@ -1562,7 +1601,7 @@ span {
   /* padding-right: 50rem; */
 
   position: relative;
-  left: 10%;
+  left: 15%;
 }
 
 .sec3t3 h2 span {
@@ -1927,6 +1966,7 @@ span {
 
   .sec3t3 h2 {
     font-size: 1.2rem;
+    left: 10%;
   }
 }
 /*-----------------------------------*\
@@ -1957,6 +1997,13 @@ span {
   font-weight: 400;
   font-size: 2.4rem;
   width: 110%;
+}
+
+.soryo {
+  border: 2px solid white;
+  padding: 0.4rem 2.4rem;
+  border-radius: 5px;
+  margin-left: 7rem;
 }
 
 .pricecartbox {
@@ -2096,6 +2143,10 @@ span {
     font-size: 2rem;
   }
 
+  .soryo {
+    margin-left: 4rem;
+  }
+
   .price {
     font-size: 4rem;
   }
@@ -2231,6 +2282,10 @@ span {
   .price {
     font-size: 2.6rem;
   }
+
+  .soryo {
+    margin-left: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2267,6 +2322,11 @@ span {
 @media (max-width: 676px) {
   .price {
     font-size: 2rem;
+  }
+
+  .soryo {
+    margin-left: 1rem;
+    padding: 0.4rem 1.2rem;
   }
 }
 
@@ -2396,7 +2456,7 @@ span {
 
 
 .shopcard5::after {
-  display: inline-block !important;
+  display: inline-block;
   content: "2X お得";
   text-transform: uppercase;
   font-size: 2.4rem;
@@ -2428,6 +2488,29 @@ span {
 
   font-weight: 900;
   font-size: 2rem;
+}
+
+.cardinfo ul li:first-child{
+  background: linear-gradient(
+    to right,
+    yellow,
+    #e4973e,
+    yellow
+ 
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+.zekon {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 /* .shopcart {
@@ -2550,11 +2633,27 @@ span {
     font-weight: 900;
     font-size: 1.6rem;
   }
+
+  .shopcard5::after {
+
+    font-size: 1.8rem;
+    padding: 0.8rem 10rem;
+
+    top: 7%;
+    right: -34%;
+ 
+  }
 }
 @media (max-width: 1250px) {
   .shoppingcard {
     margin: 5rem 2rem;
     gap: 2rem;
+  }
+
+    
+  .shopcard5::after {
+    top: 7%;
+    right: -36%;
   }
 }
 
@@ -2579,6 +2678,12 @@ span {
   .cardimg img {
     width: 100%;
   }
+
+  .shopcard5::after {
+    top: 7%;
+    right: -33%;
+  }
+
 }
 
 @media (max-width: 992px) {
@@ -2596,6 +2701,18 @@ span {
   .cardimg img {
     width: 100%;
   }
+
+  .shopcard5::after {
+    top: 6%;
+    right: -33%;
+  }
+}
+
+@media (max-width: 875px) {
+  .shopcard5::after {
+    top: 5%;
+    right: -40%;
+  }
 }
 
 @media (max-width: 850px) {
@@ -2605,10 +2722,22 @@ span {
   }
 }
 
+@media (max-width: 805px) {
+  .shopcard5::after {
+    top: 6%;
+    right: -40%;
+  }
+}
+
 @media (max-width: 768px) {
   .shoppingcard {
     width: 160%;
     gap: 2rem;
+  }
+  .shopcard5::after {
+    font-size: 1.6rem;
+    top: 5%;
+    right: -38%;
   }
 }
 
@@ -2617,12 +2746,26 @@ span {
     width: 180%;
     gap: 2rem;
   }
+  .shopcard5::after {
+    top: 5%;
+    right: -39%;
+  }
+}
+@media (max-width: 660px) {
+  .shopcard5::after {
+    top: 4%;
+    right: -40%;
+  }
 }
 
 @media (max-width: 610px) {
   .shoppingcard {
     width: 200%;
     gap: 2rem;
+  }
+  .shopcard5::after {
+    top: 4%;
+    right: -38%;
   }
 }
 
@@ -2640,12 +2783,36 @@ span {
     padding: 0.6rem 3rem;
   }
 
+  .shopcard5::after {
+    top: 5%;
+    right: -30%;
+  }
+}
+
+@media (max-width: 515px) {
+  
+  .shopcard5::after {
+    top: 5%;
+    right: -34%;
+  }
+}
+
+@media (max-width: 480px) {
+  .shopcard5::after {
+    top: 5%;
+    right: -37%;
+  }
 }
 
 @media (max-width: 450px) {
   .shoppingcard {
     width: 280%;
     gap: 2rem;
+  }
+
+  .shopcard5::after {
+    top: 5%;
+    right: -36%;
   }
 }
 
@@ -2654,12 +2821,29 @@ span {
     width: 300%;
     gap: 2rem;
   }
+
+  .shopcard5::after {
+    top: 5%;
+    right: -39%;
+  }
+}
+
+@media (max-width: 385px) {
+  .shopcard5::after {
+    top: 5%;
+    right: -41%;
+  }
 }
 
 @media (max-width: 360px) {
   .shoppingcard {
     width: 380%;
     gap: 2rem;
+  }
+
+  .shopcard5::after {
+    top: 6%;
+    right: -32%;
   }
 }
 /*-----------------------------------*\
@@ -3180,7 +3364,8 @@ span {
   justify-content: center;
 }
 .honeypackage img {
-  width: 100%;
+  width: 40%;
+  padding-bottom: 5rem;
 }
 
 .hitext {
@@ -3257,7 +3442,7 @@ span {
 
 @media (max-width: 1250px) {
   .honeypackage img {
-    width: 90%;
+    width: 30%;
   }
 
   .hitext {
@@ -3301,7 +3486,7 @@ span {
   }
 
   .honeypackage img {
-    width: 80%;
+    width: 30%;
   }
 
   .hitext {
@@ -3325,7 +3510,7 @@ span {
   }
 
   .honeypackage img {
-    width: 60%;
+    width: 40%;
   }
 
   .hitext {
@@ -4602,11 +4787,12 @@ span {
   display: flex;
   justify-content: center;
   padding: 15rem 0;
+  cursor: default;
 }
 
 .fbimg a img {
   opacity: 1;
-
+  cursor: pointer;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -4678,10 +4864,26 @@ span {
 
 .cvtit1 p {
   font-size: 1.8rem;
+  
 }
 
 .cvtit1 p:first-child {
   padding-bottom: 1rem;
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .cvbut svg {
@@ -4731,11 +4933,12 @@ span {
   display: flex;
   justify-content: center;
   margin: 0rem auto 5rem;
+  cursor: default;
 }
 
 .morecv a img {
   opacity: 1;
-
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
@@ -4887,6 +5090,21 @@ span {
 
 .qatit1 p {
   font-size: 1.8rem;
+  background: linear-gradient(
+    to right,
+    yellow,
+    #fda036,
+    yellow
+  );
+
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+
+  /* 将文本颜色设置为透明，以显示渐变背景 */
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  text-fill-color: transparent;
 }
 
 .qabut svg {
@@ -4937,11 +5155,13 @@ span {
   display: flex;
   justify-content: center;
   margin: 0rem auto 5rem;
+
+  cursor: default;
 }
 
 .moreqa a img {
   opacity: 1;
-
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
@@ -5097,7 +5317,7 @@ span {
   justify-content: center;
   gap: 5rem;
 
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .moreshopinfo-open {
@@ -5110,6 +5330,18 @@ span {
 .infoimg1 {
   display: flex;
   justify-content: center;
+
+}
+
+.infoimg1 img {
+  cursor: pointer;
+  opacity: 1;
+  
+  transition: all 0.5s ease-in-out;
+}
+
+.infoimg1 img:hover{
+  opacity: 0.6;
 }
 
 .infoimg2 {
@@ -5117,9 +5349,31 @@ span {
   justify-content: center;
 }
 
+.infoimg2 img {
+  cursor: pointer;
+  opacity: 1;
+  
+  transition: all 0.5s ease-in-out;
+}
+
+.infoimg2 img:hover{
+  opacity: 0.6;
+}
+
 .infoimg3 {
   display: flex;
   justify-content: center;
+}
+
+.infoimg3 img {
+  cursor: pointer;
+  opacity: 1;
+  
+  transition: all 0.5s ease-in-out;
+}
+
+.infoimg3 img:hover{
+  opacity: 0.6;
 }
 
 .infoimg4 {
@@ -5127,14 +5381,47 @@ span {
   justify-content: center;
 }
 
+.infoimg4 img {
+  cursor: pointer;
+  opacity: 1;
+  
+  transition: all 0.5s ease-in-out;
+}
+
+.infoimg4 img:hover{
+  opacity: 0.6;
+}
+
 .infoimg5 {
   display: flex;
   justify-content: center;
 }
 
+.infoimg5 img {
+  cursor: pointer;
+  opacity: 1;
+  
+  transition: all 0.5s ease-in-out;
+}
+
+.infoimg5 img:hover{
+  opacity: 0.6;
+}
+
 .infoimg6 {
   display: flex;
   justify-content: center;
+}
+
+.infoimg6 img {
+  cursor: pointer;
+  opacity: 1;
+  
+  transition: all 0.5s ease-in-out;
+}
+
+.infoimg6 img:hover{
+  opacity: 0.6;
 }
 
 @media (max-width: 1400px) {
